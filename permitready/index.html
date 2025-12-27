@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PermitReady - Driver's Permit Study App</title>
+    <meta name="description" content="PermitReady helps teenagers study for their driver's permit exam with practice questions and progress tracking. Available on iPhone and iPad.">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --text-muted: #666666;
+            --border-color: #e5e5e5;
+            --accent-color: #0066cc;
+            --card-bg: #f9f9f9;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #f0f0f0;
+                --text-muted: #a0a0a0;
+                --border-color: #333333;
+                --accent-color: #4da3ff;
+                --card-bg: #242424;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .pricing-box {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .pricing-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pricing-box li::before {
+            content: """;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .cta-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+
+        .cta-section h2 {
+            border: none;
+            margin: 0 0 1rem 0;
+            padding: 0;
+        }
+
+        .app-store-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .app-store-button:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background-color: var(--card-bg);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-style: italic;
+            border: 1px solid var(--border-color);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .cta-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">ê Back to TechSmog Apps</a>
+
+    <header>
+        <h1>PermitReady</h1>
+        <p class="subtitle">Your guide to passing the driver's permit exam</p>
+    </header>
+
+    <main>
+        <section>
+            <p>PermitReady is an educational app designed to help teenagers (ages 15-17) study for their driver's permit exam. With practice questions, progress tracking, and focused study sessions, PermitReady makes learning the rules of the road engaging and effective.</p>
+        </section>
+
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Practice Questions</h3>
+                <p>Study with comprehensive practice questions covering all topics on the permit exam.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Progress Tracking</h3>
+                <p>Track your quiz scores, study streaks, and performance in each category to focus on areas that need improvement.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Offline Access</h3>
+                <p>All your study data is stored locally on your device. Study anytime, anywhere, even without an internet connection.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Privacy-First</h3>
+                <p>No accounts, no tracking, no personal information collected. Your data stays on your device.</p>
+            </div>
+        </div>
+
+        <h2>Pricing</h2>
+        <div class="pricing-box">
+            <ul>
+                <li><strong>Free version:</strong> Full access with ads</li>
+                <li><strong>Ad-free version:</strong> $1.99 one-time purchase</li>
+                <li><strong>No subscriptions:</strong> Pay once, use forever</li>
+            </ul>
+        </div>
+
+        <h2>Platform</h2>
+        <p>PermitReady is available for iPhone and iPad running iOS 17 or later.</p>
+
+        <div class="cta-section">
+            <h2>Download PermitReady</h2>
+            <p>Start preparing for your permit exam today!</p>
+            <span class="coming-soon-badge">Coming soon to the App Store</span>
+            <!-- Uncomment when app is available:
+            <a href="#" class="app-store-button">Download on the App Store</a>
+            -->
+        </div>
+
+        <h2>Privacy & Safety</h2>
+        <p>We take privacy seriously, especially for teen users:</p>
+        <ul>
+            <li>No personal information collected</li>
+            <li>No user accounts required</li>
+            <li>All data stored locally on your device</li>
+            <li>Family-safe ads approved by Google AdMob</li>
+            <li>COPPA compliant</li>
+        </ul>
+        <p>For complete details, read our <a href="/permitready/privacy.html">Privacy Policy</a>.</p>
+
+        <h2>Support</h2>
+        <p>Questions or feedback? We're here to help!</p>
+        <p>Check out our <a href="/permitready/privacy.html">Privacy Policy</a> for information about how we handle your data, or reach out if you need assistance.</p>
+    </main>
+
+    <footer class="footer">
+        <p><a href="/">ê Back to TechSmog Apps</a></p>
+        <p>&copy; 2025 TechSmog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
