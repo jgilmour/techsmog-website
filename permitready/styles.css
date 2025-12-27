@@ -570,13 +570,24 @@ section {
 }
 
 .privacy-content ul {
-    margin-left: 2rem;
+    list-style: none;
+    margin-left: 0;
     margin-bottom: 1rem;
 }
 
 .privacy-content li {
     margin-bottom: 0.5rem;
     color: var(--text-muted);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.privacy-content li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 .privacy-content table {
@@ -634,6 +645,23 @@ section {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 2rem;
+}
+
+/* Override default bullet styling for special lists */
+.summary-box li {
+    padding-left: 0;
+}
+
+.summary-box li::before {
+    position: static;
+}
+
+.no-collect-list li {
+    padding-left: 0;
+}
+
+.no-collect-list li::before {
+    position: static;
 }
 
 /* Responsive Design */
