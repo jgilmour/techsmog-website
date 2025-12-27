@@ -248,7 +248,7 @@ a:hover {
 }
 
 .hero-visual img {
-    max-width: 400px;
+    max-width: 280px;
     width: 100%;
     height: auto;
 }
@@ -382,7 +382,7 @@ section {
 
 .screenshot-item {
     position: relative;
-    max-width: 350px;
+    max-width: 250px;
     margin: 0 auto;
     transition: transform 0.3s ease;
 }
