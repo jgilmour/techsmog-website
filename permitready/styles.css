@@ -239,13 +239,13 @@ a:hover {
 
 .hero-visual {
     margin-top: 3rem;
+    text-align: center;
 }
 
 .hero-visual img {
-    max-width: 300px;
+    max-width: 400px;
+    width: 100%;
     height: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
 }
 
 /* Sections */
@@ -374,6 +374,8 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .screenshot-item:hover {
@@ -385,6 +387,7 @@ section {
     width: 100%;
     height: auto;
     display: block;
+    max-width: 100%;
 }
 
 /* Pricing */
