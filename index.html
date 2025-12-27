@@ -9,6 +9,7 @@
         :root {
             --primary-color: #007AFF;
             --secondary-color: #5856D6;
+            --accent-color: #FF9500;
             --success-color: #34C759;
             --background-color: #FFFFFF;
             --background-alt: #F9FAFB;
@@ -104,16 +105,21 @@
 
         /* App Grid */
         .app-grid {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        @media (min-width: 768px) {
-            .app-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
+        .app-grid .app-card {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .app-grid .coming-soon-card {
+            width: 100%;
+            max-width: 450px;
         }
 
         /* App Card */
@@ -243,14 +249,16 @@
         }
 
         .btn-primary {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #FF6B00 100%);
             color: white;
             flex: 1;
+            box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
         }
 
         .btn-primary:hover {
-            opacity: 0.9;
+            opacity: 1;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 149, 0, 0.4);
         }
 
         .btn-secondary {
@@ -278,6 +286,12 @@
         .status-coming-soon {
             background: rgba(88, 86, 214, 0.1);
             color: var(--secondary-color);
+        }
+
+        .status-early-access {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.15) 0%, rgba(255, 59, 48, 0.15) 100%);
+            color: #FF9500;
+            border: 1px solid rgba(255, 149, 0, 0.3);
         }
 
         /* Coming Soon Card */
@@ -410,7 +424,7 @@
                         <p class="subtitle">Driver's Permit Study App</p>
                     </div>
                     <div class="app-card-body">
-                        <span class="status-badge status-coming-soon">Coming Soon</span>
+                        <span class="status-badge status-early-access">Early Access</span>
                         <p>Master your driver's permit exam with confidence. State-specific practice questions, progress tracking, and focused study modes designed for teens.</p>
 
                         <ul class="app-features">
@@ -432,8 +446,7 @@
                         </div>
 
                         <div class="app-actions">
-                            <a href="/permitready/" class="btn btn-primary">Learn More</a>
-                            <a href="/permitready/privacy.html" class="btn btn-secondary">Privacy</a>
+                            <a href="/permitready/" class="btn btn-primary" style="width: 100%;">Learn More</a>
                         </div>
                     </div>
                 </div>
