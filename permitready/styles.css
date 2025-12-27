@@ -221,7 +221,7 @@ a:hover {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 3rem 0 2rem;
     text-align: center;
 }
 
@@ -235,15 +235,15 @@ a:hover {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.25rem;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
 }
 
 .hero-cta {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .hero-visual {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
