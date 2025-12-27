@@ -3,289 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PermitReady - Driver's Permit Study App</title>
-    <meta name="description" content="PermitReady helps teenagers study for their driver's permit exam with practice questions and progress tracking. Available on iPhone and iPad.">
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --text-muted: #666666;
-            --border-color: #e5e5e5;
-            --accent-color: #0066cc;
-            --card-bg: #f9f9f9;
-        }
+    <title>PermitReady - Ace Your Permit Test</title>
+    <meta name="description" content="PermitReady - Study for your driver's permit exam with practice tests covering 13 US states. Free iOS app for teens.">
+    <meta name="keywords" content="permit test, drivers ed, practice test, DMV, learner's permit, driving exam">
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #1a1a1a;
-                --text-color: #f0f0f0;
-                --text-muted: #a0a0a0;
-                --border-color: #333333;
-                --accent-color: #4da3ff;
-                --card-bg: #242424;
-            }
-        }
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PermitReady - Ace Your Permit Test">
+    <meta property="og:description" content="The complete study app for teens preparing for their learner's permit exam.">
+    <meta property="og:type" content="website">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 2rem 1rem;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        header {
-            margin-bottom: 2.5rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-grid {
-            display: grid;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .feature-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.25rem;
-        }
-
-        .feature-card h3 {
-            margin-top: 0;
-        }
-
-        .pricing-box {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .pricing-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .pricing-box li::before {
-            content: """;
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .cta-section {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin: 2.5rem 0;
-        }
-
-        .cta-section h2 {
-            border: none;
-            margin: 0 0 1rem 0;
-            padding: 0;
-        }
-
-        .app-store-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .app-store-button:hover {
-            opacity: 0.9;
-            text-decoration: none;
-        }
-
-        .coming-soon-badge {
-            display: inline-block;
-            background-color: var(--card-bg);
-            color: var(--text-muted);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-style: italic;
-            border: 1px solid var(--border-color);
-        }
-
-        .footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 1.5rem 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            .cta-section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="/" class="back-link">� Back to TechSmog Apps</a>
-
-    <header>
-        <h1>PermitReady</h1>
-        <p class="subtitle">Your guide to passing the driver's permit exam</p>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">PermitReady</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <p>PermitReady is an educational app designed to help teenagers (ages 15-17) study for their driver's permit exam. With practice questions, progress tracking, and focused study sessions, PermitReady makes learning the rules of the road engaging and effective.</p>
-        </section>
-
-        <h2>Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Practice Questions</h3>
-                <p>Study with comprehensive practice questions covering all topics on the permit exam.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ace Your Permit Test with Confidence</h1>
+            <p>The complete study app for teens preparing for their learner's permit exam. Practice with real test questions, track your progress, and pass on your first try.</p>
+            <div class="hero-cta">
+                <a href="#app-store" class="btn btn-primary btn-large">Download on the App Store</a>
             </div>
-
-            <div class="feature-card">
-                <h3>Progress Tracking</h3>
-                <p>Track your quiz scores, study streaks, and performance in each category to focus on areas that need improvement.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Offline Access</h3>
-                <p>All your study data is stored locally on your device. Study anytime, anywhere, even without an internet connection.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Privacy-First</h3>
-                <p>No accounts, no tracking, no personal information collected. Your data stays on your device.</p>
+            <div class="hero-visual">
+                <img src="screenshot-quiz.png" alt="PermitReady quiz interface showing a practice question on iPhone" style="max-width: 300px; display: none;">
+                <!-- Placeholder for app screenshot - hidden until image is added -->
             </div>
         </div>
+    </section>
 
-        <h2>Pricing</h2>
-        <div class="pricing-box">
-            <ul>
-                <li><strong>Free version:</strong> Full access with ads</li>
-                <li><strong>Ad-free version:</strong> $1.99 one-time purchase</li>
-                <li><strong>No subscriptions:</strong> Pay once, use forever</li>
-            </ul>
+    <!-- Problem Statement -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Permit Test Doesn't Have to Be Stressful</h2>
+                <p>Many teens fail their permit exam on the first try because they don't have the right study tools. Generic practice tests don't cover your state's specific requirements, leaving you unprepared for test day.</p>
+                <p><strong>PermitReady changes that.</strong> With state-specific questions, focused practice modes, and progress tracking, you'll walk into your exam fully prepared and confident.</p>
+            </div>
         </div>
+    </section>
 
-        <h2>Platform</h2>
-        <p>PermitReady is available for iPhone and iPad running iOS 17 or later.</p>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Pass</h2>
+                <p>PermitReady is packed with features designed to help you master every topic on your state's permit exam.</p>
+            </div>
 
-        <div class="cta-section">
-            <h2>Download PermitReady</h2>
-            <p>Start preparing for your permit exam today!</p>
-            <span class="coming-soon-badge">Coming soon to the App Store</span>
-            <!-- Uncomment when app is available:
-            <a href="#" class="app-store-button">Download on the App Store</a>
-            -->
+            <div class="grid grid-3">
+                <div class="card feature-item">
+                    <div class="card-icon">📍</div>
+                    <h3>13 States Covered</h3>
+                    <p>State-specific content for Massachusetts, California, Texas, Florida, New York, Pennsylvania, Illinois, Ohio, North Carolina, Michigan, Georgia, New Jersey, and Virginia.</p>
+                    <p class="text-muted mt-2">Each state has unique requirements and passing scores—PermitReady knows them all.</p>
+                </div>
+
+                <div class="card feature-item">
+                    <div class="card-icon">📝</div>
+                    <h3>Two Study Modes</h3>
+                    <p><strong>Practice Quiz:</strong> Unlimited questions with instant explanations after each answer.</p>
+                    <p><strong>Practice Test:</strong> Timed 30-minute exam simulation to prepare for the real thing.</p>
+                </div>
+
+                <div class="card feature-item">
+                    <div class="card-icon">📚</div>
+                    <h3>Study by Category</h3>
+                    <p>Focus on specific topics: Road Signs, Traffic Laws, Safe Driving, Parking, Right of Way, and Fines & Limits.</p>
+                    <p class="text-muted mt-2">Identify your weak areas and practice until you've mastered them.</p>
+                </div>
+
+                <div class="card feature-item">
+                    <div class="card-icon">📊</div>
+                    <h3>Track Your Progress</h3>
+                    <p>See your mastery percentage for each category, monitor study streaks, and review your best scores.</p>
+                    <p class="text-muted mt-2">Review missed questions to learn from your mistakes.</p>
+                </div>
+
+                <div class="card feature-item">
+                    <div class="card-icon">🎯</div>
+                    <h3>Designed for Teens</h3>
+                    <p>Clean, intuitive interface with haptic feedback and celebrations for correct answers.</p>
+                    <p class="text-muted mt-2">Share your passing scores with friends and stay motivated.</p>
+                </div>
+
+                <div class="card feature-item">
+                    <div class="card-icon">📱</div>
+                    <h3>Study Offline</h3>
+                    <p>All questions are bundled in the app—no internet connection required.</p>
+                    <p class="text-muted mt-2">Practice anywhere, anytime, even without Wi-Fi.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h2>Privacy & Safety</h2>
-        <p>We take privacy seriously, especially for teen users:</p>
-        <ul>
-            <li>No personal information collected</li>
-            <li>No user accounts required</li>
-            <li>All data stored locally on your device</li>
-            <li>Family-safe ads approved by Google AdMob</li>
-            <li>COPPA compliant</li>
-        </ul>
-        <p>For complete details, read our <a href="/permitready/privacy.html">Privacy Policy</a>.</p>
+    <!-- How It Works -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Getting started with PermitReady is simple. Follow these three steps to ace your permit test.</p>
+            </div>
 
-        <h2>Support</h2>
-        <p>Questions or feedback? We're here to help!</p>
-        <p>Check out our <a href="/permitready/privacy.html">Privacy Policy</a> for information about how we handle your data, or reach out if you need assistance.</p>
-    </main>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Select Your State</h3>
+                        <p>Choose from 13 supported states. Each state has specific requirements, passing scores, and test formats—PermitReady knows them all.</p>
+                    </div>
+                </div>
 
-    <footer class="footer">
-        <p><a href="/">� Back to TechSmog Apps</a></p>
-        <p>&copy; 2025 TechSmog. All rights reserved.</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Practice & Learn</h3>
+                        <p>Take quizzes in practice mode with instant explanations, or challenge yourself with timed test simulations. Focus on weak categories until you've mastered them.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Track Progress</h3>
+                        <p>Watch your mastery percentage grow as you practice. Review missed questions, maintain study streaks, and know exactly when you're ready for the real exam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Honest Pricing</h2>
+                <p>No subscriptions. No recurring fees. Pay once and study forever.</p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Free Version</h3>
+                    <div class="price">$0</div>
+                    <p class="price-subtext">Forever</p>
+                    <ul class="text-muted" style="text-align: left; margin-top: 2rem;">
+                        <li>✓ All practice questions</li>
+                        <li>✓ Both study modes</li>
+                        <li>✓ Progress tracking</li>
+                        <li>✓ All 13 states</li>
+                        <li>✓ Offline access</li>
+                        <li>· Includes ads</li>
+                    </ul>
+                    <a href="#app-store" class="btn btn-secondary mt-3">Download Free</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Ad-Free Version</h3>
+                    <div class="price">$1.99</div>
+                    <p class="price-subtext">One-time purchase</p>
+                    <ul class="text-muted" style="text-align: left; margin-top: 2rem;">
+                        <li>✓ Everything in Free</li>
+                        <li>✓ <strong>No ads</strong></li>
+                        <li>✓ Support development</li>
+                        <li>✓ Pay once, use forever</li>
+                        <li>✓ No subscriptions</li>
+                    </ul>
+                    <a href="#app-store" class="btn btn-primary mt-3">Remove Ads</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Which states are supported?</h3>
+                    <p class="faq-answer">Currently 13 high-volume states: Massachusetts (MA), California (CA), Texas (TX), Florida (FL), New York (NY), Pennsylvania (PA), Illinois (IL), Ohio (OH), North Carolina (NC), Michigan (MI), Georgia (GA), New Jersey (NJ), and Virginia (VA).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Does it work offline?</h3>
+                    <p class="faq-answer">Yes! All question banks are bundled with the app, so you can study anywhere without an internet connection.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Are the questions similar to the real test?</h3>
+                    <p class="faq-answer">Yes, our questions are based on official DMV materials and cover all topics tested on your state's permit exam.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What's the difference between Practice Quiz and Practice Test?</h3>
+                    <p class="faq-answer">Practice Quiz has no time limit and shows explanations after each answer, making it perfect for learning. Practice Test is a timed 30-minute exam simulation without explanations, designed to prepare you for the real testing experience.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Is there a subscription?</h3>
+                    <p class="faq-answer">No! The app is completely free with optional ads. You can remove ads with a one-time $1.99 purchase—no subscriptions, no recurring fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer -->
+    <section>
+        <div class="container">
+            <div class="legal-section">
+                <h3>Important Notice</h3>
+                <ul>
+                    <li>This app is not affiliated with, endorsed by, or sponsored by any Department of Motor Vehicles (DMV), Registry of Motor Vehicles (RMV), or government agency.</li>
+                    <li>Practice questions are for informational and educational purposes only and do not guarantee passing the official permit exam.</li>
+                    <li>All content is derived from publicly available state driver handbooks and manuals. Question formats and content may differ from actual state exams.</li>
+                    <li>Always verify current requirements and regulations with your state's official DMV/RMV website before taking the official exam.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section-alt" id="app-store">
+        <div class="container text-center">
+            <h2>Ready to Pass Your Permit Test?</h2>
+            <p class="text-muted mb-3">Download PermitReady today and start studying with confidence.</p>
+            <div class="app-badges">
+                <!-- Placeholder for App Store badge -->
+                <span class="coming-soon-badge" style="font-size: 1.1rem; padding: 1rem 2rem;">Coming Soon to the App Store</span>
+                <!-- When ready, replace with:
+                <a href="#" class="app-badge">
+                    <img src="app-store-badge.svg" alt="Download on the App Store">
+                </a>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">The complete study app for teens preparing for their learner's permit exam.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
