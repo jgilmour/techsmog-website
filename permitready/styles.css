@@ -563,7 +563,7 @@ section {
 
 /* Footer */
 .site-footer {
-    background: var(--text-color);
+    background: #1F2937;
     color: white;
     padding: 3rem 0 2rem;
     margin-top: 4rem;
