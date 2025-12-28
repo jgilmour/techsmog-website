@@ -21,17 +21,6 @@
     --radius-lg: 16px;
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #1F2937;
-        --background-alt: #111827;
-        --text-color: #F9FAFB;
-        --text-muted: #9CA3AF;
-        --border-color: #374151;
-    }
-}
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -117,11 +106,6 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
-@media (prefers-color-scheme: dark) {
-    .site-header {
-        background-color: rgba(31, 41, 55, 0.95);
-    }
-}
 
 .nav-container {
     display: flex;
