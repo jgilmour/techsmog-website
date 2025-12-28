@@ -404,30 +404,45 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Screenshots Grid */
+/* Screenshots Grid - Horizontal Scroll */
 .screenshots-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 2rem 0;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
 }
 
-@media (min-width: 640px) {
-    .screenshots-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Custom scrollbar styling */
+.screenshots-grid::-webkit-scrollbar {
+    height: 8px;
 }
 
-@media (min-width: 1024px) {
-    .screenshots-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.screenshots-grid::-webkit-scrollbar-track {
+    background: var(--background-alt);
+    border-radius: 4px;
+    margin: 0 1rem;
+}
+
+.screenshots-grid::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.screenshots-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
 }
 
 .screenshot-item {
-    position: relative;
-    max-width: 250px;
-    margin: 0 auto;
+    flex: 0 0 auto;
+    width: 220px;
+    scroll-snap-align: start;
     transition: transform 0.3s ease;
 }
 
@@ -439,7 +454,13 @@ section {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .screenshot-item {
+        width: 260px;
+    }
 }
 
 /* Pricing */
