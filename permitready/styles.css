@@ -601,8 +601,12 @@ section {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.875rem;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .app-badges {
