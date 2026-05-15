@@ -1,0 +1,42 @@
+# TechSmog
+
+> iOS app developer building educational and productivity apps for iPhone and iPad. Primary product: PermitReady — a free driver's permit practice test app for teens in 19 US states.
+
+## PermitReady
+
+PermitReady is a free iOS app that helps teens study for their driver's permit (learner's permit) exam. It covers 19 US states with state-specific practice questions based on official 2026 driver handbooks. The app includes practice quiz mode, timed test simulation, study-by-category, progress tracking, and offline access.
+
+- Free with ads; optional $4.99 one-time purchase to remove ads
+- No subscriptions
+- Available on iPhone and iPad
+- App Store: https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311
+
+## Key Pages
+
+- [PermitReady — Features, Pricing & FAQ](https://techsmog.com/permitready/)
+- [Arizona MVD Permit Test Practice](https://techsmog.com/permitready/states/arizona/)
+- [California DMV Permit Test Practice](https://techsmog.com/permitready/states/california/)
+- [Florida DHSMV Permit Test Practice](https://techsmog.com/permitready/states/florida/)
+- [Georgia DDS Permit Test Practice](https://techsmog.com/permitready/states/georgia/)
+- [Illinois SOS Permit Test Practice](https://techsmog.com/permitready/states/illinois/)
+- [Indiana BMV Permit Test Practice](https://techsmog.com/permitready/states/indiana/)
+- [Maryland MVA Permit Test Practice](https://techsmog.com/permitready/states/maryland/)
+- [Massachusetts RMV Permit Test Practice](https://techsmog.com/permitready/states/massachusetts/)
+- [Michigan SOS Permit Test Practice](https://techsmog.com/permitready/states/michigan/)
+- [Missouri DOR Permit Test Practice](https://techsmog.com/permitready/states/missouri/)
+- [New Jersey MVC Permit Test Practice](https://techsmog.com/permitready/states/new-jersey/)
+- [New York DMV Permit Test Practice](https://techsmog.com/permitready/states/new-york/)
+- [North Carolina NCDMV Permit Test Practice](https://techsmog.com/permitready/states/north-carolina/)
+- [Ohio BMV Permit Test Practice](https://techsmog.com/permitready/states/ohio/)
+- [Pennsylvania PennDOT Permit Test Practice](https://techsmog.com/permitready/states/pennsylvania/)
+- [Tennessee DOSHS Permit Test Practice](https://techsmog.com/permitready/states/tennessee/)
+- [Texas DPS Permit Test Practice](https://techsmog.com/permitready/states/texas/)
+- [Virginia DMV Permit Test Practice](https://techsmog.com/permitready/states/virginia/)
+- [Washington DOL Permit Test Practice](https://techsmog.com/permitready/states/washington/)
+- [Privacy Policy](https://techsmog.com/permitready/privacy.html)
+- [Terms of Service](https://techsmog.com/permitready/terms.html)
+
+## Contact
+
+- Email: permitready@techsmog.com
+- Website: https://techsmog.com
