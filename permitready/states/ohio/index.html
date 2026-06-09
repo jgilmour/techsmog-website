@@ -24,105 +24,196 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="PermitReady - Ohio BMV Permit Test Practice 2026">
-    <meta name="twitter:description" content="Free iOS app for Ohio permit test prep. 40-question practice with state-specific content.">
+    <meta name="twitter:description" content="Free iOS app for Ohio permit test prep. 40-question practice with state-specific content from official 2026 handbooks.">
     <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
 
-    <!-- Structured Data: BreadcrumbList -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
-        {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
-        {"@type": "ListItem", "position": 3, "name": "Ohio BMV Permit Test Practice", "item": "https://techsmog.com/permitready/states/ohio/"}
-      ]
-    }
-    </script>
-
-    <!-- Structured Data: SoftwareApplication -->
-    <script type="application/ld+json">
+      "@type": "ListItem",
+      "position": 1,
+      "name": "TechSmog Apps",
+      "item": "https://techsmog.com/"
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "ListItem",
+      "position": 2,
       "name": "PermitReady",
-      "description": "Practice for the Ohio BMV permit test with state-specific questions based on the 2026 official handbook. The exam has 40 questions; you need at least 30 correct (75%) to pass.",
-      "applicationCategory": "EducationalApplication",
-      "applicationSubCategory": "Driver Education",
-      "operatingSystem": "iOS",
-      "inLanguage": "en-US",
-      "downloadUrl": "https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311",
-      "offers": [
-        {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free version with ads"},
-        {"@type": "Offer", "price": "4.99", "priceCurrency": "USD", "description": "Ad-free one-time purchase"}
-      ],
-      "author": {"@type": "Organization", "name": "TechSmog", "url": "https://techsmog.com"},
-      "url": "https://techsmog.com/permitready/",
-      "image": "https://techsmog.com/permitready/images/appstore.png"
-    }
-    </script>
-
-    <!-- Structured Data: FAQPage -->
-    <script type="application/ld+json">
+      "item": "https://techsmog.com/permitready/"
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How many questions is the Ohio BMV permit test?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Ohio BMV permit test has 40 questions. You typically need at least 30 correct answers (75%) to pass. Always verify current requirements with the official Bureau of Motor Vehicles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does PermitReady cover the Ohio BMV permit test?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. PermitReady includes state-specific practice questions for the Ohio BMV permit test, based on the 2026 official driver handbook. It covers road signs, traffic laws, safe driving, parking, right of way, and fines and limits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I study for the Ohio permit test offline with PermitReady?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. All Ohio question banks are bundled in the PermitReady app, so you can study anywhere without an internet connection."
-          }
-        }
-      ]
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ohio BMV Permit Test Practice",
+      "item": "https://techsmog.com/permitready/states/ohio/"
     }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PermitReady",
+  "description": "Practice for the Ohio BMV permit test with state-specific questions based on the 2026 official handbook. The exam has 40 questions; you need at least 30 correct (75%) to pass.",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Driver Education",
+  "operatingSystem": "iOS",
+  "inLanguage": "en-US",
+  "downloadUrl": "https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free version with ads"
+    },
+    {
+      "@type": "Offer",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "description": "Ad-free one-time purchase"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "TechSmog",
+    "url": "https://techsmog.com"
+  },
+  "url": "https://techsmog.com/permitready/",
+  "image": "https://techsmog.com/permitready/images/appstore.png"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many questions is the Ohio permit test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Ohio BMV permit test has 40 questions. You typically need at least 30 correct (75%) to pass. Always verify current requirements with the official Bureau of Motor Vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PermitReady cover the Ohio BMV permit test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. PermitReady includes state-specific practice questions for the Ohio BMV permit test, based on the latest 2026 official driver handbook. It covers road signs, traffic laws, safe driving, parking, right of way, and state-specific rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I study for the Ohio permit test offline with PermitReady?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Ohio question banks are bundled in the PermitReady app, so you can study anywhere without an internet connection."
+      }
+    }
+  ]
+}
     </script>
 
     <link rel="stylesheet" href="/permitready/styles.css">
 </head>
 <body>
-<header class="nav-header"><div class="container"><nav class="nav"><div class="logo"><a href="/permitready/">PermitReady</a></div><ul class="nav-links"><li><a href="/permitready/">Home</a></li><li><a href="/permitready/privacy.html">Privacy</a></li><li><a href="/permitready/terms.html">Terms</a></li></ul></nav></div></header>
+<!-- Generated by scripts/generate_permitready_site.py. -->
+<header class="nav-header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo"><a href="/permitready/">PermitReady</a></div>
+            <ul class="nav-links">
+                <li><a href="/permitready/">Home</a></li>
+                <li><a href="/permitready/privacy.html">Privacy</a></li>
+                <li><a href="/permitready/terms.html">Terms</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <main>
-<section class="hero state-hero"><div class="container">
-<h1>Ohio BMV Permit Test Practice</h1>
-<p>PermitReady is a free iOS app that helps teens prepare for the Ohio BMV permit test. The exam has 40 questions; you need at least 30 correct (75%) to pass. The app covers all Ohio handbook topics — road signs, traffic laws, safe driving, and more — with practice quizzes, timed test simulations, and progress tracking.</p>
-<a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="cta-button">Download PermitReady Free</a>
-</div></section>
-<section class="features"><div class="container">
-<h2>Ohio Permit Test Overview</h2>
-<p>40 questions; typically 30 correct (75%) to pass. Always confirm current rules directly with the official Bureau of Motor Vehicles.</p>
-<h2>Study Modes</h2><ul><li><strong>Practice Quiz:</strong> Untimed questions with explanations.</li><li><strong>Practice Test:</strong> Timed 30-minute simulation.</li><li><strong>Study by Category:</strong> Focus on signs, laws, and safety topics.</li><li><strong>Review Missed Questions:</strong> Revisit mistakes quickly.</li><li><strong>Progress Tracking:</strong> Mastery, streaks, best score, and history.</li><li><strong>Offline-First:</strong> Study without a constant internet connection.</li></ul>
-<h2>Who This Is For</h2><p>Great for teens preparing for a first learner's permit, parents helping a new driver study, and anyone retaking the knowledge test in Ohio.</p>
-<p><a href="/permitready/">Back to PermitReady main page</a> &middot; <a href="/permitready/#states-covered">View all supported states</a></p>
-</div></section>
-<section class="features"><div class="container">
-<h2>Frequently Asked Questions</h2>
-<h3>How many questions is the Ohio permit test?</h3>
-<p>The Ohio BMV permit test has 40 questions. You typically need at least 30 correct answers (75%) to pass. Always verify current requirements with the official Bureau of Motor Vehicles.</p>
-<h3>Does PermitReady cover the Ohio BMV permit test?</h3>
-<p>Yes. PermitReady includes state-specific practice questions for the Ohio BMV permit test, based on the 2026 official driver handbook. It covers road signs, traffic laws, safe driving, parking, right of way, and fines and limits.</p>
-<h3>Can I study for the Ohio permit test offline?</h3>
-<p>Yes. All Ohio question banks are bundled in the PermitReady app, so you can study anywhere without an internet connection.</p>
-</div></section>
-<section class="disclaimer"><div class="container"><h2>Important Disclaimer</h2><ul><li>PermitReady is not affiliated with or endorsed by the Bureau of Motor Vehicles or any government agency.</li><li>Content is educational and based on publicly available handbook sources.</li><li>Using this app does not guarantee passing the official permit exam.</li><li>Verify official requirements with your state licensing agency before testing.</li></ul></div></section>
+    <section class="hero state-hero">
+        <div class="container">
+            <h1>Ohio BMV Permit Test Practice</h1>
+            <p>PermitReady is a free iOS app that helps teens prepare for the Ohio BMV permit test. The exam has 40 questions; you need at least 30 correct (75%) to pass. The app covers Ohio handbook topics like road signs, traffic laws, safe driving, and state-specific rules with practice quizzes, timed test simulations, and progress tracking.</p>
+            <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="cta-button">Download PermitReady Free</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Ohio Permit Test Overview</h2>
+            <p>Minimum permit age in Ohio is 15.5. PermitReady also highlights important Ohio licensing rules so you can study the test format and the steps that come after you pass.</p>
+            <ul>
+                <li><strong>Question count:</strong> 40</li>
+                <li><strong>Passing score:</strong> 30 correct (75%)</li>
+                <li><strong>Minimum permit age:</strong> 15.5</li>
+                <li><strong>Time limit:</strong> No official time limit listed</li>
+                <li><strong>Split test:</strong> No separate scored sections listed</li>
+            </ul>
+
+            <h2>Study Modes</h2>
+            <ul>
+                <li><strong>Practice Quiz:</strong> Untimed questions with explanations after every answer.</li>
+                <li><strong>Practice Test:</strong> A state-sized simulation with 40 questions.</li>
+                <li><strong>Study by Category:</strong> Focus on road signs, traffic laws, safe driving, parking, right of way, and more.</li>
+                <li><strong>Review Missed Questions:</strong> Revisit mistakes quickly and learn why the correct answer is right.</li>
+                <li><strong>Progress Tracking:</strong> Monitor mastery, streaks, recent scores, and study history.</li>
+                <li><strong>Offline-First:</strong> Study without a constant internet connection.</li>
+            </ul>
+
+            <h2>State-Specific Requirements</h2>
+            <ul>
+<li>The test is cumulative: You must answer 30 out of 40 questions correctly (75%) to pass</li>
+<li>Drivers under 18 holding a probationary license for less than 12 months cannot drive between midnight and 6 AM</li>
+<li>Temporary Instruction Permit Identification Card (TIPIC) holders under 18 must practice for 50 hours (10 at night) before the road test</li>
+<li>During the first 12 months of a probationary license, you may not drive with more than one non-family member passenger</li>
+            </ul>
+
+            <h2>Who This Is For</h2>
+            <p>Great for teens preparing for a first learner's permit, parents helping a new driver study, and anyone retaking the knowledge test in Ohio.</p>
+            <p><a href="/permitready/">Back to PermitReady main page</a> &middot; <a href="/permitready/#states-covered">View all supported states</a></p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <h3>How many questions is the Ohio permit test?</h3>
+            <p>The Ohio BMV permit test has 40 questions. You typically need at least 30 correct (75%) to pass. Always verify current requirements with the official Bureau of Motor Vehicles.</p>
+            <h3>Does PermitReady cover the Ohio BMV permit test?</h3>
+            <p>Yes. PermitReady includes state-specific practice questions for the Ohio BMV permit test, based on the latest 2026 official driver handbook. It covers road signs, traffic laws, safe driving, parking, right of way, and state-specific rules.</p>
+            <h3>Can I study for the Ohio permit test offline?</h3>
+            <p>Yes. All Ohio question banks are bundled in the PermitReady app, so you can study anywhere without an internet connection.</p>
+        </div>
+    </section>
+
+    <section class="disclaimer">
+        <div class="container">
+            <h2>Important Disclaimer</h2>
+            <ul>
+                <li>PermitReady is not affiliated with or endorsed by the Bureau of Motor Vehicles or any government agency.</li>
+                <li>Content is educational and based on publicly available handbook sources.</li>
+                <li>Using this app does not guarantee passing the official permit exam.</li>
+                <li>Verify current requirements with your state licensing agency before testing.</li>
+            </ul>
+        </div>
+    </section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-links"><a href="/permitready/">PermitReady Home</a><a href="/permitready/privacy.html">Privacy Policy</a><a href="/permitready/terms.html">Terms of Service</a></div></div></footer>
-</body></html>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="/permitready/">PermitReady Home</a>
+            <a href="/permitready/privacy.html">Privacy Policy</a>
+            <a href="/permitready/terms.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

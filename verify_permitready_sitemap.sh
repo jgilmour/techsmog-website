@@ -1,56 +1,41 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SITEMAP="sitemap.xml"
-BASE="https://techsmog.com"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT_DIR"
 
-required=(
-  "$BASE/permitready/"
-  "$BASE/permitready/privacy.html"
-  "$BASE/permitready/terms.html"
-  "$BASE/permitready/states/massachusetts/"
-  "$BASE/permitready/states/california/"
-  "$BASE/permitready/states/texas/"
-  "$BASE/permitready/states/florida/"
-  "$BASE/permitready/states/new-york/"
-  "$BASE/permitready/states/pennsylvania/"
-  "$BASE/permitready/states/illinois/"
-  "$BASE/permitready/states/ohio/"
-  "$BASE/permitready/states/north-carolina/"
-  "$BASE/permitready/states/michigan/"
-  "$BASE/permitready/states/georgia/"
-  "$BASE/permitready/states/new-jersey/"
-  "$BASE/permitready/states/virginia/"
-  "$BASE/permitready/states/maryland/"
-  "$BASE/permitready/states/missouri/"
-  "$BASE/permitready/states/indiana/"
-  "$BASE/permitready/states/tennessee/"
-  "$BASE/permitready/states/washington/"
-  "$BASE/permitready/states/arizona/"
-)
-
-missing=0
-for url in "${required[@]}"; do
-  if ! grep -Fq "<loc>${url}</loc>" "$SITEMAP"; then
-    echo "MISSING: $url"
-    missing=1
-  fi
-done
-
-if ! grep -Fq 'Sitemap: https://techsmog.com/sitemap.xml' robots.txt; then
-  echo 'MISSING: robots.txt sitemap declaration'
-  missing=1
-fi
-
-python - <<'PY'
+python3 - <<'PY'
+import json
 import xml.etree.ElementTree as ET
-ET.parse('sitemap.xml')
-print('XML parse: OK')
+from pathlib import Path
+
+base = "https://techsmog.com"
+states = json.loads(Path("permitready/data/states.json").read_text())
+required = [
+    f"{base}/permitready/",
+    f"{base}/permitready/privacy.html",
+    f"{base}/permitready/terms.html",
+]
+required.extend(f"{base}/permitready/states/{state['slug']}/" for state in states)
+
+tree = ET.parse("sitemap.xml")
+ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+locs = {elem.text for elem in tree.findall(".//sm:loc", ns)}
+
+missing = [url for url in required if url not in locs]
+if missing:
+    for url in missing:
+        print(f"MISSING: {url}")
+    raise SystemExit("Verification failed.")
+
+robots = Path("robots.txt").read_text()
+for expected in (
+    "Sitemap: https://techsmog.com/sitemap.xml",
+    "Sitemap: https://techsmog.com/llms.txt",
+):
+    if expected not in robots:
+        raise SystemExit(f"Verification failed: missing robots.txt reference: {expected}")
+
+print("XML parse: OK")
+print("Verification passed: all required PermitReady URLs and robots sitemap declarations are present.")
 PY
-
-if [[ "$missing" -ne 0 ]]; then
-  echo 'Verification failed.'
-  exit 1
-fi
-
-echo 'Verification passed: all required PermitReady URLs and robots sitemap declaration are present.'
