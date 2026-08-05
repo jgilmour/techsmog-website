@@ -90,6 +90,25 @@ def render_requirements_list(state: dict) -> str:
     return "\n".join(items)
 
 
+def render_hours_note(state: dict) -> str:
+    """Line placed under State-Specific Requirements pointing at the driving hours log.
+
+    Only states whose own requirement text names a supervised behind-the-wheel
+    practice requirement get the definite phrasing. Everyone else gets the generic
+    "most states" wording — never a figure we cannot source from states.json.
+    """
+    if state.get("hasSupervisedHoursRequirement"):
+        return (
+            "            <p>PermitReady's driving hours log tracks these hours for you, so you're not "
+            "reconstructing them from memory at the counter.</p>"
+        )
+    return (
+        "            <p>Most states require somewhere between 40 and 60 hours of supervised practice before the "
+        f"road test. PermitReady's driving hours log tracks that time for you — confirm {escape(seo_name(state))}'s "
+        f"current requirement with the {escape(state['agencyLong'])}.</p>"
+    )
+
+
 def render_state_page(state: dict) -> str:
     state_title = f"{state_label(state)} Permit Test Practice"
     page_title = f"PermitReady - {state_title} 2026"
@@ -108,6 +127,7 @@ def render_state_page(state: dict) -> str:
     faq_answer = render_faq_answer(state)
     intro, secondary = render_overview_paragraphs(state)
     requirements_html = render_requirements_list(state)
+    hours_note_html = render_hours_note(state)
     question_label = f"How many questions is the {seo_name(state)} permit test?"
     coverage_label = f"Does PermitReady cover the {state_label(state)} permit test?"
     offline_label = f"Can I study for the {seo_name(state)} permit test offline with PermitReady?"
@@ -252,6 +272,7 @@ def render_state_page(state: dict) -> str:
                 <li><strong>Study by Category:</strong> Focus on road signs, traffic laws, safe driving, parking, right of way, and more.</li>
                 <li><strong>Review Missed Questions:</strong> Revisit mistakes quickly and learn why the correct answer is right.</li>
                 <li><strong>Progress Tracking:</strong> Monitor mastery, streaks, recent scores, and study history.</li>
+                <li><strong>Driving Hours Log:</strong> Track supervised driving practice and share the log with a parent.</li>
                 <li><strong>Offline-First:</strong> Study without a constant internet connection.</li>
             </ul>
 
@@ -259,6 +280,7 @@ def render_state_page(state: dict) -> str:
             <ul>
 {requirements_html}
             </ul>
+{hours_note_html}
 
             <h2>Who This Is For</h2>
             <p>Great for teens preparing for a first learner's permit, parents helping a new driver study, and anyone retaking the knowledge test in {escape(seo_name(state))}.</p>
@@ -312,11 +334,13 @@ def render_llms(states: list[dict]) -> str:
         "",
         "## PermitReady",
         "",
-        "PermitReady is a free iOS app that helps teens study for their driver's permit (learner's permit) exam. It covers all 50 U.S. states plus Washington, DC with state-specific practice questions based on official 2026 driver handbooks. The app includes practice quiz mode, timed test simulation, study-by-category, progress tracking, and offline access.",
+        "PermitReady is a free iOS app that helps teens study for their driver's permit (learner's permit) exam. It covers all 50 U.S. states plus Washington, DC with state-specific practice questions based on official 2026 driver handbooks. The app includes practice quiz mode, timed test simulation, study-by-category, progress tracking, offline access, and a driving hours log for supervised practice after the permit test.",
         "",
         "- Free with ads; optional $4.99 one-time purchase to remove ads",
         "- No subscriptions",
         "- Available on iPhone and iPad",
+        "- Driving hours log: record each supervised drive (date, duration, conditions) and share a copy with a parent as a file over AirDrop, Messages, Mail, or Files",
+        "- No accounts, no sign-in, no servers; sharing is file-based snapshot export, not live sync",
         f"- App Store: {APP_STORE_URL}",
         "",
         "## Key Pages",
@@ -355,7 +379,7 @@ def render_sitemap(states: list[dict]) -> str:
     entries = [
         sitemap_entry(f"{BASE_URL}/", UPDATE_DATE, "monthly", "0.8"),
         sitemap_entry(f"{BASE_URL}/permitready/", UPDATE_DATE, "weekly", "1.0"),
-        sitemap_entry(f"{BASE_URL}/permitready/privacy.html", "2025-01-01", "yearly", "0.3"),
+        sitemap_entry(f"{BASE_URL}/permitready/privacy.html", "2026-08-04", "yearly", "0.3"),
         sitemap_entry(f"{BASE_URL}/permitready/terms.html", UPDATE_DATE, "yearly", "0.3"),
     ]
     for state in states:

@@ -12,6 +12,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Stage I learner permit begins at age 15 and requires supervised driving with a parent, guardian, instructor, or licensed driver age 21 or older in the front seat",
       "Before a restricted Stage II license, the teen generally must hold the learner permit for at least 6 months and complete 50 hours of behind-the-wheel practice or an approved driver education course",
@@ -33,6 +34,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": 25,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Instruction permit available at age 14 and generally valid for 2 years",
       "Drivers age 16 or 17 must hold the instruction permit for at least 6 months before licensing",
@@ -54,10 +56,11 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold permit for 6 months before road test",
       "30 hours of supervised driving required (10 at night)",
-      "Drivers under 18 prohibited from driving 12am\u20135am for first 6 months of license",
+      "Drivers under 18 prohibited from driving 12am–5am for first 6 months of license",
       "No passengers under 18 (except immediate family) for first 6 months of license"
     ]
   },
@@ -74,6 +77,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Instruction permit available at age 14 and generally valid for 2 years; the current manual says it cannot be renewed",
       "Permit holders must drive with a licensed driver age 21 or older seated beside them",
@@ -95,6 +99,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Minors (under 18) cannot use cell phones (even hands-free) while driving",
       "Provisional license holders cannot drive between 11 PM and 5 AM for the first 12 months",
@@ -116,6 +121,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": 60,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Minor permit available at age 15; permit validity is generally 3 years",
       "Colorado allows an at-home written test and publishes a 60-minute time limit for that knowledge test",
@@ -137,6 +143,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Learner permit available at age 16 and knowledge test requires 20 correct out of 25",
       "Teens generally need 30 hours of classroom instruction plus at least 40 hours behind the wheel",
@@ -158,6 +165,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Delaware Level One learner permit starts at age 16",
       "Sponsor must certify 50 supervised hours including 10 hours at night",
@@ -179,6 +187,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": 75,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "DC learner permit available at age 16 and generally valid for 2 years",
       "For teen applicants in the GRAD program, the official practice test describes a 30-question knowledge test with a 75-minute limit",
@@ -200,6 +209,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": 60,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Applicants under 18 can take the Class E Knowledge Exam online",
       "Applicants under 18 must complete the 6-hour Driver Education Traffic Safety (DETS) course (replaced TLSAE in Aug 2025)",
@@ -220,6 +230,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": true,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Test is strictly divided: 20 Road Signs and 20 Road Rules",
       "Must score 75% (15/20) on EACH section independently to pass; failing one section fails the entire exam",
@@ -241,6 +252,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": 60,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Learner permit testing begins at age 15 years and 6 months",
       "Hawaii's statewide online learner-permit page says the permit knowledge test has 25 questions and a 1-hour time limit",
@@ -262,6 +274,7 @@
     "minimumPermitAge": 14.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Driver Training Permit begins at age 14 years and 6 months for applicants under 17; a Class D instruction permit is also available for applicants age 17 or older",
       "Idaho's Class D knowledge test has 40 questions and allows up to 6 missed answers, which means 34 correct to pass",
@@ -283,6 +296,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Permit phase requires 50 hours of practice (10 at night)",
       "Must be enrolled in an approved Driver Education course if under age 17 and 3 months",
@@ -303,10 +317,11 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold learner's permit for 180 days before road test",
       "50 hours of supervised driving required (10 at night)",
-      "Intermediate license holders prohibited from driving 10pm\u20135am for first year",
+      "Intermediate license holders prohibited from driving 10pm–5am for first year",
       "No more than 1 passenger under 21 (except immediate family) for first 180 days of intermediate license"
     ]
   },
@@ -323,6 +338,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Instruction permit begins at age 14 and requires passing the knowledge and vision tests",
       "Iowa's permit knowledge test uses 25 questions and an 80% passing score",
@@ -344,6 +360,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Instruction permit begins at age 14 and is generally valid for 1 year",
       "Kansas says the knowledge test uses 25 written questions on traffic laws and road signs and is not timed",
@@ -365,6 +382,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Kentucky teen permit applicants may begin at age 15 and must pass written and vision tests through Kentucky State Police",
       "Kentucky's written test is officially scored at 80%; public KSP materials indicate the operator permit exam uses 40 questions",
@@ -386,6 +404,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Louisiana's Temporary Instructional Permit (TIP) can begin at age 14, while the learner permit itself begins at age 15",
       "The learner permit knowledge test has 40 questions and requires a minimum 80% score",
@@ -407,6 +426,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Maine's knowledge test has 30 questions and requires at least 24 correct answers",
       "Applicants under 21 generally must hold the learner permit 6 months before road testing",
@@ -428,6 +448,7 @@
     "minimumPermitAge": 15.75,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold learner's permit for at least 9 months before applying for a provisional license",
       "60 hours of supervised driving required (at least 15 at night)",
@@ -449,6 +470,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": 25,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Parent/guardian must attend 2-hour driver education session",
       "Must hold permit for 6 months before road test",
@@ -468,6 +490,7 @@
     "minimumPermitAge": 14.75,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Level 1 License requires Segment 1 Driver Ed.",
       "Kelsey's Law prohibits mobile phone use for Level 1 & 2 drivers.",
@@ -488,6 +511,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Instruction permit begins at age 15 for teen drivers",
       "Before a provisional license, teens generally must hold the permit 6 months and complete 50 supervised hours including 15 at night, or 40 hours including 15 at night if a parent completes the approved awareness class",
@@ -509,6 +533,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Mississippi's regular learner permit begins at age 15 and requires proof of school enrollment or other qualifying school-status documentation for most applicants under 18",
       "Applicants must pass both the knowledge and eye exam, and the regular learner permit is generally valid for 2 years",
@@ -530,6 +555,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold instruction permit for 182 days before applying for intermediate license",
       "40 hours of supervised driving required, including 10 hours at night",
@@ -551,6 +577,7 @@
     "minimumPermitAge": 14.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Montana teens may begin the learner-license path at age 14 1/2 while participating in or after completing state-approved traffic education; otherwise the learner path begins later depending on driver education status",
       "The learner license is issued when the primary written test is passed, requires a vision test, and is generally valid for 1 year",
@@ -572,6 +599,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Nebraska's general Learner's Permit (LPD) begins at age 15 with a licensed driver age 21 or older in the seat beside the permit holder, while school-related permits can begin younger",
       "Nebraska officially says the Class O written test uses 25 questions and applicants must answer at least 80% correctly to pass",
@@ -593,6 +621,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Nevada residents can apply for an instruction permit at age 15 1/2",
       "Drivers under 18 must hold an instruction permit for at least 6 months before licensing",
@@ -616,6 +645,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "New Hampshire does not issue a traditional learner permit for supervised practice driving",
       "Drivers under 18 must complete a state-approved driver education program before licensing",
@@ -635,6 +665,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Kyleigh's Law: Drivers under 21 with a permit or probationary license must display red reflectorized decals on the top left corner of both license plates",
       "GDL curfew: No driving between 11:01 PM and 5:00 AM (Under 21)",
@@ -655,6 +686,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "New Mexico's instructional permit begins at age 15 and requires the knowledge and vision tests, plus parental consent for applicants under 18",
       "Teen applicants generally must be enrolled in an approved driver education course that includes DWI education and practice driving",
@@ -676,6 +708,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "Must correctly answer at least 14 of the 20 questions to pass",
       "CRITICAL: You MUST correctly answer at least 2 of the 4 road sign questions to pass; failing this section causes a test failure regardless of total score",
@@ -696,6 +729,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": true,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "The test is strictly split: You must pass a 'Regulatory Signs' recognition test (identifying signs by shape/color only) BEFORE you can take the 25-question written knowledge test",
       "Level 1 Limited Learner Permit holders can only drive between 5 AM and 9 PM for the first 6 months",
@@ -716,6 +750,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "North Dakota's learner permit begins at age 14 and requires the knowledge test, vision screen, and a sponsor's signature for applicants under 18",
       "Permit holders ages 14-15 generally must hold the permit 12 months or until age 16, but at least 6 months; ages 16-17 generally must hold it at least 6 months or until age 18",
@@ -737,6 +772,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "The test is cumulative: You must answer 30 out of 40 questions correctly (75%) to pass",
       "Drivers under 18 holding a probationary license for less than 12 months cannot drive between midnight and 6 AM",
@@ -757,6 +793,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Oklahoma's written exam is officially scored at 15 correct answers out of 20 questions",
       "A learner permit generally begins at age 15 for applicants enrolled in approved driver education, or at age 16 without driver education",
@@ -778,6 +815,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Oregon officially says the Class C knowledge test has 35 multiple-choice questions and requires 28 correct answers to pass",
       "Applicants under 18 generally must hold the instruction permit for at least 6 months, and out-of-state permit time can count",
@@ -799,6 +837,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must successfully answer 15 of the 18 questions to pass (83%)",
       "Permit is valid for one year from the date of issue",
@@ -820,6 +859,7 @@
     "minimumPermitAge": 16,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold learner's permit for 6 months before applying for a restricted license",
       "50 hours of supervised driving required (10 at night)",
@@ -841,6 +881,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "South Carolina's beginner permit begins at age 15 and requires the vision and knowledge tests",
       "A regular beginner permit generally allows practice driving from 6 AM to midnight with a licensed driver age 21 or older who has at least 1 year of driving experience, and after midnight with a qualified adult",
@@ -862,6 +903,7 @@
     "minimumPermitAge": 14,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "South Dakota's instruction permit begins at age 14 and generally requires the knowledge test unless a qualifying state-approved driver education course waives that testing step",
       "Teens generally must hold the instruction permit 275 days without driver education or 180 days with approved driver education before the restricted step",
@@ -883,10 +925,11 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold permit for 180 days (6 months) before road test",
       "50 hours of supervised driving required (10 at night)",
-      "Intermediate license holders under 17 prohibited from driving 11pm\u20136am",
+      "Intermediate license holders under 17 prohibited from driving 11pm–6am",
       "No more than 1 passenger under 21 (except immediate family) for first 6 months of intermediate license"
     ]
   },
@@ -903,6 +946,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": 60,
     "hasSplitTest": true,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "The test is strictly split into two sections: Highway Signs (15 questions) and Traffic Laws (15 questions)",
       "You must score at least 70% to pass the exam",
@@ -924,6 +968,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Utah's learner permit begins at age 15 and requires passing a 50-question closed-book written knowledge test",
       "Utah's 2026 driver handbook says the written knowledge test typically takes 30 to 45 minutes and requires a score of 80% or better, while learner-permit scores and permits remain valid for 18 months",
@@ -945,6 +990,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Vermont officially says the learner permit test is online, has 20 questions, and requires 16 correct answers to pass",
       "A Vermont resident must be at least 15 years old to take the learner permit test, and applicants ages 15 to 17 generally need a parent or guardian signature",
@@ -966,6 +1012,7 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": true,
+    "hasSupervisedHoursRequirement": false,
     "uniqueRequirements": [
       "The test is strictly split into two parts: 10 Traffic Signs and 30 General Knowledge questions",
       "CRITICAL: You must answer ALL 10 traffic sign questions correctly (100%) in Part 1 to proceed; missing even one sign results in automatic failure",
@@ -987,10 +1034,11 @@
     "minimumPermitAge": 15.5,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Must hold permit for 6 months before road test",
       "50 hours of supervised driving required (10 at night)",
-      "Intermediate license holders under 18 prohibited from driving 1am\u20135am",
+      "Intermediate license holders under 18 prohibited from driving 1am–5am",
       "No passengers under 20 (except immediate family) for first 6 months of intermediate license"
     ]
   },
@@ -1007,6 +1055,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "West Virginia's knowledge examination has at least 25 questions, and applicants must answer 19 correctly to pass",
       "The Level 1 GDL instruction permit begins at age 15 and requires a vision screening, knowledge test, school eligibility certificate, and parental or guardian consent for most minors",
@@ -1028,6 +1077,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": true,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Wisconsin's permit process includes a separate 15-question highway signs test requiring 12 correct answers and a 50-question knowledge test requiring 40 correct answers",
       "The Class D instruction permit begins at age 15 and generally requires a sponsor, a knowledge test, a highway signs test, and a vision screening",
@@ -1049,6 +1099,7 @@
     "minimumPermitAge": 15,
     "timeLimitMinutes": null,
     "hasSplitTest": false,
+    "hasSupervisedHoursRequirement": true,
     "uniqueRequirements": [
       "Wyoming's regular learner permit is generally issued at ages 15 to 16, requires a written exam and vision screening, and is valid for 1 year",
       "Permit holders generally must drive with a licensed person over age 18 in the front passenger seat, and the permit must be held at least 10 days before applying for broader driving privileges",

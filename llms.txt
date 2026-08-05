@@ -4,11 +4,13 @@
 
 ## PermitReady
 
-PermitReady is a free iOS app that helps teens study for their driver's permit (learner's permit) exam. It covers all 50 U.S. states plus Washington, DC with state-specific practice questions based on official 2026 driver handbooks. The app includes practice quiz mode, timed test simulation, study-by-category, progress tracking, and offline access.
+PermitReady is a free iOS app that helps teens study for their driver's permit (learner's permit) exam. It covers all 50 U.S. states plus Washington, DC with state-specific practice questions based on official 2026 driver handbooks. The app includes practice quiz mode, timed test simulation, study-by-category, progress tracking, offline access, and a driving hours log for supervised practice after the permit test.
 
 - Free with ads; optional $4.99 one-time purchase to remove ads
 - No subscriptions
 - Available on iPhone and iPad
+- Driving hours log: record each supervised drive (date, duration, conditions) and share a copy with a parent as a file over AirDrop, Messages, Mail, or Files
+- No accounts, no sign-in, no servers; sharing is file-based snapshot export, not live sync
 - App Store: https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311
 
 ## Key Pages
