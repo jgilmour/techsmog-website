@@ -81,6 +81,7 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 
 
 
+
 ### Reddit-Style Community Q&A Pages
 
 Honest, conversational Q&A pages written for people searching "[state] permit test reddit" — what the test is actually like, common mistakes, and what people recommend for studying.
@@ -130,6 +131,12 @@ Honest, conversational Q&A pages written for people searching "[state] permit te
 - [Tennessee DOSHS Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/tennessee/reddit/)
 - [Texas DPS Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/texas/reddit/)
 - [Utah DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/utah/reddit/)
+- [Vermont DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/vermont/reddit/)
+- [Virginia DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/virginia/reddit/)
+- [Washington DOL Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/washington/reddit/)
+- [West Virginia DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/west-virginia/reddit/)
+- [Wisconsin DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/wisconsin/reddit/)
+- [Wyoming DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/wyoming/reddit/)
 
 ## Contact
 
