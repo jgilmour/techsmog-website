@@ -74,6 +74,7 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 
 
 
+
 ### Reddit-Style Community Q&A Pages
 
 Honest, conversational Q&A pages written for people searching "[state] permit test reddit" — what the test is actually like, common mistakes, and what people recommend for studying.
@@ -88,6 +89,11 @@ Honest, conversational Q&A pages written for people searching "[state] permit te
 - [Delaware DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/delaware/reddit/)
 - [Washington, DC DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/district-of-columbia/reddit/)
 - [Florida DHSMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/florida/reddit/)
+- [Georgia DDS Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/georgia/reddit/)
+- [Hawaii DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/hawaii/reddit/)
+- [Idaho DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/idaho/reddit/)
+- [Illinois SOS Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/illinois/reddit/)
+- [Indiana BMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/indiana/reddit/)
 
 ## Contact
 
