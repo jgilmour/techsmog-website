@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadReady App Not Working? Troubleshooting Guide (2026)</title>
+    <meta name="description" content="Login loops, account migration, missing hours, two-device pairing, location permission, and drives that won't log — what users have reported in the RoadReady app in 2026 and what to try for each.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TechSmog">
+    <meta name="application-name" content="PermitReady">
+    <link rel="canonical" href="https://techsmog.com/permitready/guides/roadready-troubleshooting/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RoadReady App Not Working? Troubleshooting Guide (2026)">
+    <meta property="og:description" content="Login loops, account migration, missing hours, two-device pairing, and drives that won't log — what to try for each.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techsmog.com/permitready/guides/roadready-troubleshooting/">
+    <meta property="og:image" content="https://techsmog.com/permitready/images/appstore.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="TechSmog">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="RoadReady App Not Working? Troubleshooting Guide (2026)">
+    <meta name="twitter:description" content="Login loops, account migration, missing hours, two-device pairing, and drives that won't log — what to try for each.">
+    <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
+    {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
+    {"@type": "ListItem", "position": 3, "name": "Guides", "item": "https://techsmog.com/permitready/guides/roadready-troubleshooting/"},
+    {"@type": "ListItem", "position": 4, "name": "RoadReady Troubleshooting", "item": "https://techsmog.com/permitready/guides/roadready-troubleshooting/"}
+  ]
+}
+    </script>
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why can't I log into the RoadReady app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Users have reported sign-in loops following the 3.4 update and the account migration that accompanied it. Try updating to the latest App Store or Play Store version first, since fixes have shipped frequently. Then request a password reset rather than retyping a saved password, check that you are signing in with the same email the account was created under, and confirm whether you are using the teen account or the parent account. If the app still will not accept the login, contact Safe Roads Alliance support directly, since only they can act on a server-side account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the RoadReady account migration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RoadReady's own homepage carries a banner about account migration difficulties as of August 2026, following its 3.4 release. Accounts moved to a new system, and some users have reported that their existing credentials or logged drives did not carry over cleanly. Because the account lives on RoadReady's servers, the fix has to come from their support team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My logged driving hours are missing from RoadReady. What can I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the paired account first — RoadReady uses a teen account and a parent account, and drives visible on one device may still be visible on the other. Confirm you are signed into the same account the drives were logged under. If the hours are visible anywhere, export or screenshot them immediately before doing anything else. If they are not visible on either device, contact RoadReady support, since the record is stored on their servers rather than on your phone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does RoadReady require two phones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RoadReady is built around a paired setup: the teen has an account and the supervising parent or guardian has a separate account, typically on a second device. Reviewers in 2026 have described this as a barrier when a second device is not available. If a second device is not workable for your family, a log app that stores everything locally on one phone is an alternative."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does RoadReady ask for Always Allow location permission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RoadReady logs drives automatically using telematics, which requires background location access to detect that a trip has started and ended. Setting location to While Using the App or denying it will generally stop automatic drive detection from working. If you would rather not grant background location, a manual-entry log app does not need location permission at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My drives are not being logged automatically. What should I check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check that location permission is set to Always, that Precise Location is on, that Background App Refresh is enabled for the app, and that Low Power Mode is off, since it can suspend background activity. Automatic detection also needs a data connection to sync. If automatic logging is unreliable for you, log the drive manually as soon as it ends so the record is not lost."
+      }
+    }
+  ]
+}
+    </script>
+
+    <link rel="stylesheet" href="/permitready/styles.css?v=6">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">
+                    <img src="/permitready/images/appstore.png" alt="PermitReady icon" class="logo-icon">
+                    PermitReady
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/permitready/">Home</a></li>
+                    <li><a href="/permitready/about/">About</a></li>
+                    <li><a href="/permitready/driving-log/">Driving Log</a></li>
+                    <li><a href="/permitready/compare/permitready-vs-roadready/">Compare</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>RoadReady App Not Working? Here's What to Try</h1>
+            <p>Login loops, account migration, missing hours, two-device pairing, and drives that won't log — what users have reported in 2026, and the steps worth trying for each.</p>
+        </div>
+    </section>
+
+    <main class="container privacy-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <p class="text-muted"><a href="/">TechSmog Apps</a> &rsaquo; <a href="/permitready/">PermitReady</a> &rsaquo; Guides &rsaquo; RoadReady Troubleshooting</p>
+        </nav>
+
+        <h2>What's going on</h2>
+        <p>RoadReady shipped nine releases between June and August 2026, most of them labeled as stability improvements. Over the same period, App Store reviewers have reported login issues, problems following the account migration that came with the 3.4 update, and drives that would not log. RoadReady's own homepage carries a banner about account migration difficulties as of August 2026.</p>
+        <p>A word on what this page is and isn't. RoadReady is a long-standing product from Safe Roads Alliance, and it is referenced by name in official materials in Massachusetts, Wisconsin, Ohio, and Montana. We make a competing app, so take the framing for what it is — but the troubleshooting steps below are the ones we would give anyone, and where the fix has to come from RoadReady's own support team, we say so.</p>
+        <div class="summary-box">
+            <p><strong>Do this first, whatever your issue:</strong> if you can currently see your logged hours anywhere — on the teen device, on the parent device, in an emailed report — export or screenshot them now. RoadReady stores your log on its servers, not on your phone, so a working account today is not a guarantee of a readable log tomorrow. Get a copy while you have one.</p>
+        </div>
+        <p class="text-muted">Quoted reviews below are from public App Store reviews, quoted verbatim. Where we have not been able to verify a direct quote, we describe what users have reported rather than putting words in anyone's mouth.</p>
+
+        <h2>1. Login loop — the app won't let you in</h2>
+        <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 1.5rem 0; font-style: italic;">
+            <p>"App ceased being able to log a drive, then wouldn't accept login"</p>
+            <p class="text-muted" style="font-style: normal; font-size: 0.9rem;">— App Store reviewer, June 2026</p>
+        </blockquote>
+        <p>Some users have reported that correct credentials are rejected, or that the app returns to the sign-in screen immediately after a successful-looking login. Worth trying, in order:</p>
+        <ul>
+            <li><strong>Update the app.</strong> With nine releases in roughly seven weeks, the version you are on may predate a fix. Check the App Store or Play Store for an update rather than assuming automatic updates have run.</li>
+            <li><strong>Use password reset instead of retyping.</strong> If your account was migrated, a saved password may no longer be the current one. A reset writes a fresh credential into the new system.</li>
+            <li><strong>Check which email the account was created under.</strong> Families often have a parent email on one account and a teen email on the other, and signing in with the wrong one looks identical to a rejected password.</li>
+            <li><strong>Confirm which role you are signing in as.</strong> Teen and parent accounts are separate. Signing into the teen account on the parent's device (or the reverse) will not show what you expect.</li>
+            <li><strong>Force quit and reopen, then restart the device.</strong> Standard, but it clears a stuck session token often enough to be worth the thirty seconds.</li>
+            <li><strong>Delete and reinstall — but only after you have a copy of your hours.</strong> Reinstalling is safe in the sense that the log lives on RoadReady's servers, not the phone; it is unsafe in the sense that if the account itself is the problem, reinstalling does not get you back to a readable log.</li>
+            <li><strong>Contact Safe Roads Alliance support.</strong> A server-side account problem cannot be fixed from your phone. Support contact details are on RoadReady's own site.</li>
+        </ul>
+
+        <h2>2. Account migration after the 3.4 update</h2>
+        <p>RoadReady's homepage banner about account migration difficulties, live as of August 2026, is the clearest statement of the situation — it comes from RoadReady itself. If your problem started after updating to 3.4, this is the most likely explanation, and it is not something you did wrong.</p>
+        <ul>
+            <li><strong>Read the banner and any linked instructions on RoadReady's site first.</strong> If they have published a migration procedure, follow it before trying anything else; ad-hoc fixes can complicate a support ticket later.</li>
+            <li><strong>Do not delete the app while a migration is unresolved.</strong> Keeping the installed app gives support something to work with, and occasionally an old session still renders data a fresh install will not.</li>
+            <li><strong>Migrate the parent account too.</strong> If the pair is half-migrated, the parent view and the teen log can disagree about how many hours exist.</li>
+            <li><strong>Keep a record of dates.</strong> When you updated, when the problem started, what your total was before. Support will ask, and so might your licensing office if a total ends up in dispute.</li>
+            <li><strong>Ohio users:</strong> Ohio's program is administered through <a href="https://roadready.ohio.gov" rel="nofollow noopener" target="_blank">RoadReady.ohio.gov</a>. If you are logging hours for an Ohio requirement, start there — the state site is the authority on what Ohio accepts, and on which version of the app the state program uses.</li>
+        </ul>
+
+        <h2>3. Hours not showing, or hours that appear to be lost</h2>
+        <p>Users have reported opening the app to find logged drives missing or a total lower than expected. Because the log is stored server-side, there is no local file to recover on your own device — but there are places the data may still be visible:</p>
+        <ul>
+            <li><strong>Check the other device in the pair.</strong> The parent account often still displays drives the teen account cannot reach, and vice versa. This is the single most useful check.</li>
+            <li><strong>Check for a filtered or date-limited view.</strong> Confirm you are looking at a full history rather than a current-week or current-month view.</li>
+            <li><strong>Look in email.</strong> If the app ever sent a summary, report, or certification PDF, that email is an independent copy of your total.</li>
+            <li><strong>The moment you can see them, export them.</strong> PDF, CSV, or screenshots. This is the step people skip and regret.</li>
+            <li><strong>Then contact support</strong> with your account email and approximate date range. Server-side restoration is only possible on their end.</li>
+        </ul>
+        <p>If the hours cannot be recovered, reconstruct from what you and your supervising driver remember and keep the reconstruction honest — <a href="/permitready/help/switching-from-roadready/">our switching guide</a> walks through how to do it and how to annotate it.</p>
+
+        <h2>4. Two-device setup confusion</h2>
+        <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 1.5rem 0; font-style: italic;">
+            <p>"This is the first time I've ever seen an app require two phones to have it installed in order for the program to actually work."</p>
+            <p class="text-muted" style="font-style: normal; font-size: 0.9rem;">— App Store reviewer, June 2026</p>
+        </blockquote>
+        <p>RoadReady is designed around a pair: a teen account that logs drives and a parent or guardian account that reviews and certifies them. That design is deliberate — the parent attestation is the part states care about — but it does mean the app expects two accounts, and usually two devices.</p>
+        <ul>
+            <li><strong>Set up the parent account first, then invite the teen</strong> (or follow whatever order RoadReady's current onboarding specifies). Doing it in the wrong order is a common cause of an unpaired state.</li>
+            <li><strong>Use two different email addresses.</strong> Reusing one email across both roles causes predictable confusion later.</li>
+            <li><strong>If the invitation never arrives,</strong> check spam, and check that the address was typed correctly — there is usually no way to see the pending invite address from the other side.</li>
+            <li><strong>If a second device genuinely isn't available,</strong> the paired model is not going to work for you. That is a design constraint, not a bug. A local, single-device log is the alternative.</li>
+        </ul>
+
+        <h2>5. Location permission requirements</h2>
+        <p>RoadReady's automatic drive detection relies on background location. In practice that means granting <strong>Always Allow</strong> — <em>While Using the App</em> is generally not enough for a feature whose whole point is noticing a drive you did not tell it about.</p>
+        <ul>
+            <li><strong>iPhone:</strong> Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; RoadReady &rarr; <em>Always</em>, and turn on <em>Precise Location</em>.</li>
+            <li><strong>Android:</strong> Settings &rarr; Apps &rarr; RoadReady &rarr; Permissions &rarr; Location &rarr; <em>Allow all the time</em>, with precise location enabled.</li>
+            <li><strong>Expect a battery cost.</strong> Continuous background location is not free, and some users have reported drain.</li>
+            <li><strong>If you are not comfortable granting background location to a teenager's phone,</strong> that is a reasonable position to hold. A manual-entry log app does not ask for location at all — PermitReady never requests location permission, because you type in the drive yourself.</li>
+        </ul>
+
+        <h2>6. Drives not logging</h2>
+        <p>Users have reported drives that were not captured, or that appeared with the wrong duration. If automatic logging is the feature failing you, work down this list:</p>
+        <ul>
+            <li><strong>Location set to Always, with Precise Location on.</strong> See above. This is the most common cause.</li>
+            <li><strong>Background App Refresh enabled</strong> for the app (iPhone: Settings &rarr; General &rarr; Background App Refresh).</li>
+            <li><strong>Low Power Mode off.</strong> It suspends background activity and is a frequent, invisible culprit on a teenager's phone.</li>
+            <li><strong>Battery optimization exemption on Android.</strong> Aggressive battery management can kill background detection outright on some manufacturers' builds.</li>
+            <li><strong>A working data connection.</strong> RoadReady syncs to its servers; a drive through a dead-signal area may not record cleanly. This is the trade-off with any server-backed logging app.</li>
+            <li><strong>Log it manually as soon as the drive ends.</strong> If automatic capture is unreliable for you, do not wait and hope — a manual entry made in the driveway is worth more than a perfect record you never got.</li>
+        </ul>
+
+        <h2>If troubleshooting doesn't work</h2>
+        <p>Two honest paths.</p>
+        <p><strong>Stay and escalate.</strong> If your state's official instructions name RoadReady — Massachusetts, Wisconsin, Ohio, or Montana — or your driving school requires it, the path of least resistance is usually to keep working with Safe Roads Alliance support until the account is right. Only they can fix a server-side account, and no third party can do it for you. Ohio families should start at <a href="https://roadready.ohio.gov" rel="nofollow noopener" target="_blank">RoadReady.ohio.gov</a>.</p>
+        <p><strong>Or move your hours somewhere local.</strong> If you would rather not depend on an account at all, <a href="/permitready/help/switching-from-roadready/">our step-by-step switching guide</a> covers getting your hours out and re-entering them in PermitReady, including the case where you cannot export anything. It also lists, plainly, what PermitReady cannot do — no Android, no automatic logging, no PDF affidavit.</p>
+        <p>Before you decide either way, the <a href="/permitready/compare/permitready-vs-roadready/">side-by-side comparison</a> lays out what each app does better.</p>
+
+        <div class="hero-cta" style="margin: 2.5rem 0;">
+            <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="btn btn-primary btn-large">Download PermitReady Free</a>
+        </div>
+
+        <div class="legal-section" style="margin-top: 3rem;">
+            <h3>Trademark and affiliation notice</h3>
+            <p>RoadReady&reg; is a registered trademark of Safe Roads Alliance, Inc. PermitReady is not affiliated with, endorsed by, or sponsored by Safe Roads Alliance, Inc.</p>
+            <p>This page is an independently written troubleshooting guide. It is not official support documentation, and TechSmog cannot access, restore, or modify a RoadReady account. For account issues, contact Safe Roads Alliance directly.</p>
+            <p>PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency.</p>
+            <p>Competitor information on this page was last verified August 2026 — ratings, versions, and features change frequently.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Permit test practice and a supervised driving hours log, in one free iPhone app. No account, no sign-in, works offline.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/about/">About</a></li>
+                        <li><a href="/permitready/driving-log/">Driving Hours Log</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/permitready/terms.html">Terms of Service</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
