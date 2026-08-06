@@ -51,7 +51,7 @@
         <a href="/permitready/" class="back-link">← Back to PermitReady</a>
 
         <h1>PermitReady Privacy Policy</h1>
-        <p class="effective-date"><strong>Effective Date:</strong> August 4, 2026</p>
+        <p class="effective-date"><strong>Effective Date:</strong> August 6, 2026</p>
 
         <h2>Welcome</h2>
         <p>PermitReady is an educational app that helps teenagers study for their driver's permit exam. We built this app with privacy in mind—especially for teen users and their parents. This policy explains what information we collect (spoiler: not much!) and how we handle it.</p>
@@ -63,7 +63,8 @@
                 <li><strong>Your study progress stays on your device.</strong> We don't have servers or databases.</li>
                 <li><strong>So does your driving hours log.</strong> You can send a copy to a parent yourself, but nothing is shared unless you choose to share it.</li>
                 <li><strong>We show ads</strong> through Google AdMob (unless you purchase the ad-free version).</li>
-                <li><strong>That's basically it.</strong></li>
+                <li><strong>The ad SDK does track you.</strong> Google AdMob may use coarse location, device identifiers, and usage data to personalize ads and to track you across other apps and websites. That is separate from your log and study data, and it is declared on our App Store privacy label.</li>
+                <li><strong>The $4.99 ad-free purchase removes AdMob entirely</strong>, and with it the cross-app tracking.</li>
             </ul>
         </div>
 
@@ -99,32 +100,42 @@
         <h3>Notifications</h3>
         <p>PermitReady can remind you about your permit test date or nudge you if you've been away from studying. Notification permission is <strong>never</strong> requested when you first open the app—it's only asked after you've finished a quiz, and only if you tap "Remind Me." Reminders are scheduled locally on your device by iOS. We don't send push notifications, and we have no way to reach your device.</p>
 
-        <h3>Information We Don't Collect</h3>
-        <p>We want to be clear about what we <em>don't</em> do:</p>
+        <h3>What TechSmog Doesn't Collect</h3>
+        <p>These statements are about us, the developer. They are not about the advertising SDK, which is covered in the next section.</p>
         <ul class="no-collect-list">
             <li>We don't collect names, emails, or phone numbers</li>
             <li>We don't have user accounts or logins</li>
-            <li>We don't use analytics or tracking services</li>
-            <li>We don't collect your location</li>
-            <li>We don't track you across apps or websites</li>
-            <li>We don't use cookies or tracking pixels</li>
+            <li>Your driving log and study data are stored only on your device and never leave it unless you choose to share them</li>
+            <li>We don't run our own analytics on your study or driving data</li>
+            <li>The app never asks for location permission and never uses GPS to record a drive</li>
             <li>We don't have servers or databases storing your info</li>
         </ul>
+        <p><strong>Important distinction:</strong> the free version of PermitReady includes Google AdMob, and AdMob <em>does</em> collect data and <em>does</em> track across apps and websites. Two things are true at once: your driving log is genuinely private and local, and the ad SDK is a tracker. The section below explains exactly what AdMob does.</p>
 
         <h2>Advertising</h2>
 
         <h3>Google AdMob</h3>
-        <p>We display ads through Google AdMob to keep the app free. When you see an ad, Google may collect:</p>
+        <p>We display ads through Google AdMob to keep the app free.</p>
+        <p><strong>Google AdMob may use coarse location, device identifiers, and usage data to serve personalized ads and to track you across other apps and websites, as declared in our App Store privacy label under "Data Used to Track You." This tracking occurs regardless of your login status.</strong></p>
+        <p>Our App Store privacy label declares the following:</p>
         <ul>
-            <li>Device identifiers</li>
-            <li>IP address</li>
-            <li>Information about how you interact with ads</li>
+            <li><strong>Data Used to Track You:</strong> Location, Identifiers, Usage Data (collected by the AdMob SDK)</li>
+            <li><strong>Data Not Linked to You — Third-Party Advertising:</strong> Coarse Location, Device ID, Product Interaction, Advertising Data</li>
+            <li><strong>Data Not Linked to You — Analytics:</strong> Product Interaction</li>
         </ul>
-        <p>This information is used by Google to show you ads and to limit how often you see the same ad. We don't control what Google collects—they operate under their own privacy policy.</p>
+        <p>None of that data is your driving log, your quiz history, or your notes. AdMob collects ad-related signals from the device; it does not receive the contents of your log or your study progress, and neither do we.</p>
+        <p><strong>App Tracking Transparency:</strong> iOS asks for your permission before an app can track you across other companies' apps and websites. If you decline, or if you have "Allow Apps to Request to Track" turned off in Settings, AdMob is not permitted to use your device's advertising identifier for cross-app tracking, and you will see less-personalized ads. You can change this at any time in Settings → Privacy &amp; Security → Tracking.</p>
+        <p>We don't control what Google collects—they operate under their own privacy policy.</p>
         <p><strong>Learn more:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
-        <h3>Removing Ads</h3>
-        <p>You can purchase the ad-free version for $4.99 (one-time purchase). This is processed entirely through Apple's App Store. We never see your payment information—Apple handles everything. We only store a simple yes/no flag on your device to remember that you've removed ads.</p>
+        <h3>Removing Ads Removes the Tracking</h3>
+        <p>You can purchase the ad-free version for $4.99 (one-time purchase). This does more than hide the ad banners.</p>
+        <ul>
+            <li><strong>AdMob is removed from the app entirely.</strong> The ad SDK is not initialized, no ad requests are made, and no ad-related data is sent to Google.</li>
+            <li><strong>The cross-app tracking described above stops with it.</strong> With no AdMob in the app, there is no coarse location, device identifier, advertising data, or product-interaction data going to an advertising network.</li>
+            <li><strong>What remains is a fully offline app.</strong> No accounts, no servers, no third-party SDKs collecting anything—just your study data and your driving log on your device.</li>
+        </ul>
+        <p>The purchase is processed entirely through Apple's App Store. We never see your payment information—Apple handles everything. We only store a simple yes/no flag on your device to remember that you've removed ads.</p>
 
         <h2>In-App Purchases</h2>
         <p>Our $4.99 ad-free purchase is handled by Apple. Here's what that means:</p>
@@ -158,7 +169,7 @@
             <tbody>
                 <tr>
                     <td>Google AdMob</td>
-                    <td>Displaying ads</td>
+                    <td>Displaying ads. Collects coarse location, device identifiers, advertising data, and product interaction. Used to track across apps and websites. Removed entirely by the $4.99 ad-free purchase.</td>
                     <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
                 </tr>
                 <tr>
@@ -186,7 +197,8 @@
         <h2>Changes to This Privacy Policy</h2>
         <p>We may update this policy from time to time. If we make significant changes, we'll update the "Effective Date" at the top of this page. We encourage you to review this policy periodically.</p>
         <p>For minor changes (like fixing typos), we won't necessarily notify you. For major changes that affect how we handle your information, we'll do our best to let you know through the app.</p>
-        <p><strong>August 2026:</strong> Updated to cover the driving hours log, the option to share that log with a parent or guardian, and test-date reminders.</p>
+        <p><strong>August 4, 2026:</strong> Updated to cover the driving hours log, the option to share that log with a parent or guardian, and test-date reminders.</p>
+        <p><strong>August 6, 2026:</strong> Rewrote the advertising and "what we don't collect" sections so they match our App Store privacy label exactly. Earlier versions of this page said the app did not track you across apps or websites and did not collect location. Those statements were written about TechSmog and were inaccurate as a description of the Google AdMob SDK bundled in the free version, which does collect coarse location and device identifiers and does track across apps and websites. This page now separates what we do from what the ad SDK does, and explains that the ad-free purchase removes AdMob entirely.</p>
 
         <h2>Contact Us</h2>
         <p>Questions about this privacy policy? We're happy to help.</p>
@@ -196,11 +208,11 @@
         </p>
 
         <h2>Summary</h2>
-        <p>We built PermitReady to help you pass your permit test, not to collect your data. Your study progress stays on your device, we don't track you, and the only third-party service that collects information is Google AdMob (which you can avoid by purchasing the ad-free version). That's our promise.</p>
+        <p>We built PermitReady to help you pass your permit test and log the hours that come after, not to collect your data. Your study progress and your driving log stay on your device—we have no servers and we never see them. The one thing that does collect data is Google AdMob, the advertising SDK in the free version, which may use coarse location, device identifiers, and usage data to personalize ads and track you across other apps and websites. Purchasing the ad-free version for $4.99 removes AdMob, and the tracking with it.</p>
         <p>Good luck on your test! 🚗</p>
 
         <div class="text-muted" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-            <p><em>Last updated: August 4, 2026</em></p>
+            <p><em>Last updated: August 6, 2026</em></p>
         </div>
     </main>
 
