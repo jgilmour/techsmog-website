@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PermitReady vs RoadReady: Driving Log App Comparison (2026)</title>
+    <meta name="description" content="An honest side-by-side of PermitReady and RoadReady for logging supervised driving hours: platforms, accounts, offline use, telematics, state recognition, and what each app does better.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TechSmog">
+    <meta name="application-name" content="PermitReady">
+    <link rel="canonical" href="https://techsmog.com/permitready/compare/permitready-vs-roadready/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PermitReady vs RoadReady: Driving Log App Comparison (2026)">
+    <meta property="og:description" content="Side-by-side comparison of two supervised driving hours log apps, including what each one does better and which to use in your state.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techsmog.com/permitready/compare/permitready-vs-roadready/">
+    <meta property="og:image" content="https://techsmog.com/permitready/images/appstore.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="TechSmog">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PermitReady vs RoadReady: Driving Log App Comparison (2026)">
+    <meta name="twitter:description" content="Side-by-side comparison of two supervised driving hours log apps, including what each one does better.">
+    <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
+    {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
+    {"@type": "ListItem", "position": 3, "name": "Compare", "item": "https://techsmog.com/permitready/compare/permitready-vs-roadready/"},
+    {"@type": "ListItem", "position": 4, "name": "PermitReady vs RoadReady", "item": "https://techsmog.com/permitready/compare/permitready-vs-roadready/"}
+  ]
+}
+    </script>
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between PermitReady and RoadReady?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RoadReady is an iOS and Android supervised driving log from Safe Roads Alliance that logs drives automatically using telematics and uses paired teen and parent accounts. It is referenced by name in official materials in Massachusetts, Wisconsin, Ohio, and Montana. PermitReady is an independent iOS-only app that combines permit test practice for all 50 states plus DC with a manual driving hours log that needs no account, no second device, and no internet connection. Neither app is required by any state."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my state require the RoadReady app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No state requires a specific app to log supervised driving hours. RoadReady is referenced by name in official materials in Massachusetts, Wisconsin, Ohio, and Montana, which means following those instructions with that app is the path of least resistance in those states. What states actually require is an accurate record of hours and, in most cases, a parent or guardian certification. Always confirm the accepted log format with your own licensing agency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PermitReady require an account or a second phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PermitReady has no accounts, no sign-in, and no paired parent device. Everything is stored on the device it was entered on, and the whole app works offline. Sharing a log with a parent is done by sending a file over AirDrop, Messages, or Mail, which the parent can import into their own copy of the app or simply keep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can PermitReady log my drives automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PermitReady uses manual entry only — you type in the date, duration, and conditions after each drive. It does not use GPS and never requests location permission. RoadReady offers automatic telematics-based logging, which is more convenient but requires background location access and a data connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PermitReady available on Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PermitReady is iPhone and iPad only. RoadReady is available on both iOS and Android. If the teen driver or the supervising parent uses an Android phone, PermitReady will not work for that person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I move my hours from RoadReady to PermitReady?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export or screenshot your existing hours before uninstalling anything, download PermitReady, then re-enter each drive with its date, duration, and conditions. Backdating is fully supported. If you cannot export, reconstruct from totals and note the source in each entry's notes field. A step-by-step guide is available at techsmog.com/permitready/help/switching-from-roadready/."
+      }
+    }
+  ]
+}
+    </script>
+
+    <link rel="stylesheet" href="/permitready/styles.css?v=6">
+    <style>
+        .cmp-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+        .cmp-table { width: 100%; border-collapse: collapse; min-width: 620px; }
+        .cmp-table th, .cmp-table td { border: 1px solid var(--border-color); padding: 0.75rem; text-align: left; vertical-align: top; font-size: 0.98rem; }
+        .cmp-table thead th { background: var(--background-alt); font-weight: 700; }
+        .cmp-table tbody th { font-weight: 600; background: var(--background-alt); }
+        .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+        .decision-card { border: 2px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; background: var(--background-color); }
+        .decision-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .decision-card ul { margin: 0; padding-left: 1.1rem; }
+        .decision-card li { margin-bottom: 0.4rem; }
+        .quote-block { border-left: 4px solid var(--primary-color); padding-left: 1rem; margin: 1.25rem 0; font-style: italic; }
+        .quote-block .attrib { font-style: normal; font-size: 0.9rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">
+                    <img src="/permitready/images/appstore.png" alt="PermitReady icon" class="logo-icon">
+                    PermitReady
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/permitready/">Home</a></li>
+                    <li><a href="/permitready/about/">About</a></li>
+                    <li><a href="/permitready/driving-log/">Driving Log</a></li>
+                    <li><a href="/permitready/privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>PermitReady vs RoadReady</h1>
+            <p>Two apps for logging supervised driving hours, compared honestly — including the parts where the other one wins.</p>
+        </div>
+    </section>
+
+    <main class="container privacy-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <p class="text-muted"><a href="/">TechSmog Apps</a> &rsaquo; <a href="/permitready/">PermitReady</a> &rsaquo; Compare &rsaquo; PermitReady vs RoadReady</p>
+        </nav>
+
+        <div class="summary-box">
+            <p><strong>PermitReady is an independent app not affiliated with any DMV or state agency. RoadReady is referenced by name in official materials in Massachusetts, Wisconsin, Ohio, and Montana — if you're in one of those states and want to follow official instructions exactly, that's worth knowing before reading further.</strong></p>
+            <p>We make PermitReady. We have tried to write this page so that a reader in Massachusetts who should stay with RoadReady finishes it knowing that.</p>
+        </div>
+
+        <h2>Which should you use?</h2>
+        <div class="decision-grid">
+            <div class="decision-card">
+                <h3>Use RoadReady if&hellip;</h3>
+                <ul>
+                    <li>You're in <strong>Ohio</strong> — use RoadReady Ohio specifically, through <a href="https://roadready.ohio.gov" rel="nofollow noopener" target="_blank">RoadReady.ohio.gov</a></li>
+                    <li>Your state's official form or instructions <strong>name it</strong> and you want the path of least resistance</li>
+                    <li>You're on <strong>Android</strong></li>
+                    <li>You want <strong>automatic telematics logging</strong> rather than typing in each drive</li>
+                    <li>You want a <strong>parent dashboard</strong> that updates on its own</li>
+                    <li>Your state expects a <strong>PDF affidavit</strong> the app can generate</li>
+                </ul>
+            </div>
+            <div class="decision-card" style="border-color: var(--primary-color);">
+                <h3>Use PermitReady if&hellip;</h3>
+                <ul>
+                    <li>You <strong>also need permit-test practice</strong> — all 50 states plus DC, in the same app</li>
+                    <li>You don't want <strong>accounts or a second phone</strong> involved</li>
+                    <li>You need it to <strong>work offline</strong>, with no signal and no sync</li>
+                    <li>Your current app has <strong>stopped working</strong> and you need your hours somewhere reliable</li>
+                    <li>You'd rather <strong>not grant background location</strong> to a teenager's phone</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-muted">Using both is also a legitimate answer: the state-referenced app for the paperwork, PermitReady for the studying and an offline copy of the hours.</p>
+
+        <h2>Side-by-side comparison</h2>
+        <div class="cmp-table-wrap">
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">PermitReady</th>
+                        <th scope="col">RoadReady</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Platforms</th><td>iOS only (iPhone, iPad)</td><td>iOS + Android</td></tr>
+                    <tr><th scope="row">Price</th><td>Free (ads) / $4.99 one-time to remove ads</td><td>Free</td></tr>
+                    <tr><th scope="row">Account required</th><td>No</td><td>Yes — two accounts (teen + parent)</td></tr>
+                    <tr><th scope="row">Second device required</th><td>No</td><td>Yes — parent must also install</td></tr>
+                    <tr><th scope="row">Works offline</th><td>Yes — fully</td><td>Requires a data connection</td></tr>
+                    <tr><th scope="row">Telematics (auto-logging)</th><td>No — manual entry</td><td>Yes</td></tr>
+                    <tr><th scope="row">State-referenced / recommended</th><td>No</td><td>Yes (MA, WI, OH, MT)</td></tr>
+                    <tr><th scope="row">Permit test practice</th><td>Yes — all 50 states + DC</td><td>No</td></tr>
+                    <tr><th scope="row">Log sharing</th><td>File export (AirDrop, Messages, Mail)</td><td>In-app parent view</td></tr>
+                    <tr><th scope="row">PDF affidavit export</th><td>No</td><td>Yes (some states)</td></tr>
+                    <tr><th scope="row">App Store rating (Aug 2026)</th><td>4.8 / 16 ratings</td><td>2.4 / ~12,000 ratings</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-muted">A note on that last row, because it would be easy to misread: 16 ratings is not a meaningful sample, and 12,000 is. PermitReady is a new app with very few reviews; RoadReady has been used by millions of families over many years. A 4.8 from 16 people tells you almost nothing, and we would rather say so than let the number do work it hasn't earned.</p>
+
+        <h2>What RoadReady does better</h2>
+        <p>Genuinely, and not as a setup for a rebuttal:</p>
+        <ul>
+            <li><strong>Automatic telematics logging.</strong> The app can detect and record a drive without anyone remembering to open it. For families where the logging keeps getting forgotten, this is the single most valuable feature either app has, and PermitReady does not have it.</li>
+            <li><strong>Android support.</strong> RoadReady runs on both platforms. PermitReady does not run on Android at all, and no amount of other features fixes that if you're on a Pixel.</li>
+            <li><strong>In-app parent view.</strong> A supervising parent sees the log update in their own app. No file to send, no import step, no "did you get it?"</li>
+            <li><strong>State recognition in Massachusetts, Wisconsin, Ohio, and Montana.</strong> Being named in official materials removes ambiguity about whether your record will be accepted. That is worth real money in avoided hassle at the counter.</li>
+            <li><strong>PDF affidavit export in some states.</strong> The app can produce the certification document the state expects, rather than leaving you to transcribe totals onto a form.</li>
+            <li><strong>An established track record.</strong> Safe Roads Alliance reports the program has been used by millions of families, and RoadReady has been recognized with a U.S. Department of Transportation award. It has been doing this far longer than we have.</li>
+        </ul>
+
+        <h2>What PermitReady does better</h2>
+        <ul>
+            <li><strong>No account required.</strong> No sign-up, no email verification, no password to reset, and nothing that can lock you out of your own record.</li>
+            <li><strong>No second phone.</strong> One device, one app. A parent who wants a copy gets a file; a parent who wants their own running log can import it, but nothing breaks if they never install anything.</li>
+            <li><strong>Works fully offline.</strong> Every question bank and every logged drive lives on the device. No signal, no sync, no server between you and your own hours.</li>
+            <li><strong>Studying and logging in one app.</strong> RoadReady does not do permit-test practice; PermitReady covers all 50 states plus DC with handbook-based questions, then keeps going with the log after you pass. That is the whole reason the app exists.</li>
+            <li><strong>Simpler manual entry.</strong> Date, duration, conditions, notes — a drive takes about fifteen seconds to log, with no pairing state, no sync status, and no account role to get wrong.</li>
+            <li><strong>No "Always Allow" location requirement.</strong> PermitReady never requests location permission, because it does not track where you drive. For some parents that is a feature in itself.</li>
+        </ul>
+
+        <h2>What users are saying about RoadReady</h2>
+        <p>The following quotes are from public App Store reviews as of August 2026:</p>
+        <div class="quote-block">
+            <p>"This is the first time I've ever seen an app require two phones to have it installed in order for the program to actually work."</p>
+            <p class="attrib">&mdash; App Store reviewer, June 2026</p>
+        </div>
+        <div class="quote-block">
+            <p>"App ceased being able to log a drive, then wouldn't accept login"</p>
+            <p class="attrib">&mdash; App Store reviewer, June 2026</p>
+        </div>
+        <p>For context rather than commentary: RoadReady shipped nine releases between June and August 2026, most labeled as stability improvements, and RoadReady's own homepage carries a banner about account migration difficulties as of August 2026. Its App Store rating sits at 2.4 stars across roughly 12,000 ratings accumulated over the app's lifetime.</p>
+        <p>Reviews are a snapshot of the people motivated to write one, and an app in the middle of a migration attracts more of them. If you are troubleshooting rather than shopping, our <a href="/permitready/guides/roadready-troubleshooting/">RoadReady troubleshooting guide</a> goes through the reported issues one at a time.</p>
+
+        <h2>Switching your hours over</h2>
+        <p>If you decide to move, do not delete anything until you have a copy of your log — RoadReady stores it server-side, so once an account is inaccessible the record can be too.</p>
+        <p><a href="/permitready/help/switching-from-roadready/"><strong>Read the step-by-step switching guide &rarr;</strong></a> It covers exporting from RoadReady, what to do if no export is available, how to re-enter drives in PermitReady, verifying your total against your state's requirement, and an honest list of what PermitReady cannot do yet.</p>
+
+        <h2>Frequently asked</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">Does my state require the RoadReady app?</h3>
+                <p class="faq-answer">No state requires a specific app. Massachusetts, Wisconsin, Ohio, and Montana reference RoadReady by name in official materials, which makes it the smoothest option there. What states require is an accurate record of hours and, usually, a parent or guardian certification. Confirm the accepted format with your own licensing agency.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can PermitReady log my drives automatically?</h3>
+                <p class="faq-answer">No. Every drive is entered by hand. The app does not use GPS and never asks for location permission. That is a deliberate trade — it is why the log works with no signal and no permissions — but if you want automatic detection, RoadReady has it and we do not.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Is PermitReady on Android?</h3>
+                <p class="faq-answer">No. iPhone and iPad only. If the teen or the supervising parent is on Android, RoadReady is the one that will work for both of you.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can my parent see my log without installing anything?</h3>
+                <p class="faq-answer">Yes. You send them a file over AirDrop, Messages, or Mail. They can read it, keep it, or import it into their own copy of PermitReady if they want a running total of their own. There is no account for either of you.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Will PermitReady's log be accepted by my DMV?</h3>
+                <p class="faq-answer">PermitReady's log is an accurate record you can copy onto whatever form your state requires. No state has formally approved or rejected it as a substitute for an official form. Always confirm with your state agency what log format they accept.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Which app is cheaper?</h3>
+                <p class="faq-answer">RoadReady is free. PermitReady is free with ads, with an optional one-time $4.99 purchase that removes ads and the advertising SDK entirely. Neither app has a subscription.</p>
+            </div>
+        </div>
+
+        <div class="hero-cta" style="margin: 2.5rem 0;">
+            <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="btn btn-primary btn-large">Download PermitReady Free</a>
+        </div>
+
+        <div class="legal-section" style="margin-top: 3rem;">
+            <h3>Trademark and affiliation notice</h3>
+            <p>RoadReady&reg; is a registered trademark of Safe Roads Alliance, Inc. PermitReady is not affiliated with, endorsed by, or sponsored by Safe Roads Alliance, Inc. Competitor information was last verified August 2026 — ratings, versions, and features change frequently.</p>
+            <p>PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency. No state has formally approved or rejected PermitReady's driving log as a substitute for an official state form. Always confirm with your state agency what log format they accept.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Permit test practice and a supervised driving hours log, in one free iPhone app. No account, no sign-in, works offline.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/about/">About</a></li>
+                        <li><a href="/permitready/driving-log/">Driving Hours Log</a></li>
+                        <li><a href="/permitready/help/switching-from-roadready/">Switching Guide</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/permitready/terms.html">Terms of Service</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
