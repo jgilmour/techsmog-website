@@ -70,6 +70,10 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 - [Privacy Policy](https://techsmog.com/permitready/privacy.html)
 - [Terms of Service](https://techsmog.com/permitready/terms.html)
 
+
+
+
+
 ### Reddit-Style Community Q&A Pages
 
 Honest, conversational Q&A pages written for people searching "[state] permit test reddit" — what the test is actually like, common mistakes, and what people recommend for studying.
@@ -79,6 +83,11 @@ Honest, conversational Q&A pages written for people searching "[state] permit te
 - [Arizona MVD Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/arizona/reddit/)
 - [Arkansas DFA Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/arkansas/reddit/)
 - [California DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/california/reddit/)
+- [Colorado DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/colorado/reddit/)
+- [Connecticut DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/connecticut/reddit/)
+- [Delaware DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/delaware/reddit/)
+- [Washington, DC DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/district-of-columbia/reddit/)
+- [Florida DHSMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/florida/reddit/)
 
 ## Contact
 

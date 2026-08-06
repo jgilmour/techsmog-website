@@ -91,10 +91,22 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/colorado/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/connecticut/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techsmog.com/permitready/states/connecticut/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://techsmog.com/permitready/states/delaware/</loc>
@@ -103,16 +115,34 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/delaware/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/district-of-columbia/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/district-of-columbia/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/florida/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techsmog.com/permitready/states/florida/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://techsmog.com/permitready/states/georgia/</loc>
