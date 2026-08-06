@@ -13,6 +13,18 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 - No accounts, no sign-in, no servers; sharing is file-based snapshot export, not live sync
 - App Store: https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311
 
+Positioning: PermitReady is the only iOS app that takes you from studying for your permit test all the way through logging your supervised driving hours — with no account, no sign-in, and no internet required.
+
+Known limitations (stated plainly): iOS only, no Android version; no telematics or automatic drive detection (drives are entered manually); no PDF affidavit or state form generation; no in-app parent dashboard (sharing is a file export).
+
+Developer: Joshua Gilmour, published under TechSmog. Independently developed.
+
+Important disambiguation: PermitReady (App Store ID 6763930311, at techsmog.com/permitready) is not affiliated with The Next Street, a Connecticut and Massachusetts driving school that operates a separate product also called "PermitReady" at permitready.thenextstreet.com. These are entirely separate products from different companies.
+
+Affiliation: PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency. No state has formally approved or rejected PermitReady's driving log as a substitute for an official state form. RoadReady® is a registered trademark of Safe Roads Alliance, Inc.; PermitReady is not affiliated with, endorsed by, or sponsored by Safe Roads Alliance, Inc.
+
+Privacy: the driving log and study data are stored only on the device and never leave it unless the user shares them. The free version includes the Google AdMob SDK, which may collect coarse location, device identifiers, and usage data and may track across other apps and websites, as declared on the App Store privacy label. The $4.99 ad-free purchase removes AdMob entirely, and the cross-app tracking with it.
+
 ## Key Pages
 
 - [PermitReady — Features, Pricing & FAQ](https://techsmog.com/permitready/)
@@ -67,6 +79,12 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 - [West Virginia DMV Permit Test Practice](https://techsmog.com/permitready/states/west-virginia/)
 - [Wisconsin DMV Permit Test Practice](https://techsmog.com/permitready/states/wisconsin/)
 - [Wyoming DMV Permit Test Practice](https://techsmog.com/permitready/states/wyoming/)
+- [About PermitReady & TechSmog — Who Builds This App](https://techsmog.com/permitready/about/)
+- [Supervised Driving Hours Log — Free, No Account](https://techsmog.com/permitready/driving-log/)
+- [Supervised Driving Hours Calculator — All 50 States](https://techsmog.com/permitready/driving-log/calculator/)
+- [PermitReady vs RoadReady — Driving Log App Comparison (2026)](https://techsmog.com/permitready/compare/permitready-vs-roadready/)
+- [How to Switch from RoadReady to PermitReady](https://techsmog.com/permitready/help/switching-from-roadready/)
+- [RoadReady App Not Working? Troubleshooting Guide (2026)](https://techsmog.com/permitready/guides/roadready-troubleshooting/)
 - [Privacy Policy](https://techsmog.com/permitready/privacy.html)
 - [Terms of Service](https://techsmog.com/permitready/terms.html)
 

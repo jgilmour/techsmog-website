@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervised Driving Hours Calculator — All 50 States | PermitReady</title>
+    <meta name="description" content="Free supervised driving hours calculator. Pick your state, enter the hours you've logged, and see how many total and night hours you have left before your road test — plus a projected finish date.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TechSmog">
+    <meta name="application-name" content="PermitReady">
+    <link rel="canonical" href="https://techsmog.com/permitready/driving-log/calculator/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Supervised Driving Hours Calculator — All 50 States | PermitReady">
+    <meta property="og:description" content="Pick your state, enter your logged hours, and see how many total and night hours you have left before the road test.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techsmog.com/permitready/driving-log/calculator/">
+    <meta property="og:image" content="https://techsmog.com/permitready/images/appstore.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="TechSmog">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Supervised Driving Hours Calculator — All 50 States | PermitReady">
+    <meta name="twitter:description" content="Pick your state, enter your logged hours, and see how many total and night hours you have left.">
+    <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
+    {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
+    {"@type": "ListItem", "position": 3, "name": "Supervised Driving Hours Log", "item": "https://techsmog.com/permitready/driving-log/"},
+    {"@type": "ListItem", "position": 4, "name": "Supervised Driving Hours Calculator", "item": "https://techsmog.com/permitready/driving-log/calculator/"}
+  ]
+}
+    </script>
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many supervised driving hours do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your state. Most require 40 to 50 total hours with 10 of them at night. Pennsylvania requires 65, North Carolina 60, New York 50 with 15 at night, Virginia 45 with 15 at night, and Texas 10 hours with driver education or 30 without. Requirements change, so confirm the current figure with your state's DMV, RMV, DPS, or BMV before your road test."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do night hours count toward my total hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In nearly every state, yes — night hours are a subset of your total, not an addition to it. A state requiring 50 hours including 10 at night expects 50 hours total, at least 10 of which happened after dark. This calculator treats night hours as part of the total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a night driving hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "States typically define night driving relative to sunset and sunrise, often starting 30 minutes after sunset and ending 30 minutes before sunrise. Some states use fixed clock times instead. Check your state's handbook for the exact definition it uses, since a drive that ends at dusk may not qualify."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the DMV check my driving hours log?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most states a parent or guardian signs a certification attesting to the total hours, and that signed form is what the licensing office collects. The detailed log is usually not audited line by line, but some offices do ask to see it and some states require specific breakdowns such as night or bad-weather hours."
+      }
+    }
+  ]
+}
+    </script>
+
+    <link rel="stylesheet" href="/permitready/styles.css?v=6">
+    <style>
+        .calc { max-width: 720px; margin: 0 auto; }
+        .calc-panel {
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            background: var(--background-color);
+            box-shadow: var(--shadow-md);
+        }
+        .calc-field { margin-bottom: 1.25rem; }
+        .calc-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+        .calc-field .hint {
+            display: block;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+        .calc-field select,
+        .calc-field input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--text-color);
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+        }
+        .calc-field select:focus,
+        .calc-field input:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 1px;
+        }
+        .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 560px) { .calc-row { grid-template-columns: 1fr; } }
+
+        .calc-results {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .req-line {
+            background: var(--background-alt);
+            border-radius: var(--radius-sm);
+            padding: 0.9rem 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+        }
+        .result-block { margin-bottom: 1.5rem; }
+        .result-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.4rem;
+        }
+        .result-head .label { font-weight: 600; }
+        .result-head .value { font-weight: 700; color: var(--primary-color); }
+        .bar {
+            height: 14px;
+            border-radius: 999px;
+            background: var(--border-color);
+            overflow: hidden;
+        }
+        .bar > span {
+            display: block;
+            height: 100%;
+            width: 0;
+            border-radius: 999px;
+            background: var(--primary-color);
+            transition: width 0.35s ease;
+        }
+        .bar.done > span { background: var(--success-color); }
+        .bar-caption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.35rem; }
+        .callout {
+            border-left: 4px solid var(--primary-color);
+            background: var(--background-alt);
+            padding: 0.9rem 1rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1rem;
+            font-size: 0.98rem;
+        }
+        .callout.success { border-left-color: var(--success-color); }
+        .calc-note { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">
+                    <img src="/permitready/images/appstore.png" alt="PermitReady icon" class="logo-icon">
+                    PermitReady
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/permitready/">Home</a></li>
+                    <li><a href="/permitready/about/">About</a></li>
+                    <li><a href="/permitready/driving-log/">Driving Log</a></li>
+                    <li><a href="/permitready/compare/permitready-vs-roadready/">Compare</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Supervised Driving Hours Calculator</h1>
+            <p>Pick your state, enter what you've logged, and see how many total and night hours you have left before the road test.</p>
+        </div>
+    </section>
+
+    <main class="container privacy-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <p class="text-muted"><a href="/">TechSmog Apps</a> &rsaquo; <a href="/permitready/">PermitReady</a> &rsaquo; <a href="/permitready/driving-log/">Driving Log</a> &rsaquo; Calculator</p>
+        </nav>
+
+        <div class="calc">
+            <div class="calc-panel">
+                <div class="calc-field">
+                    <label for="state">Your state
+                        <span class="hint">Requirements are approximate — see the note under your result.</span>
+                    </label>
+                    <select id="state">
+                        <option value="">Select your state…</option>
+                    </select>
+                </div>
+
+                <div class="calc-field" id="variant-wrap" hidden>
+                    <label for="variant">Your situation
+                        <span class="hint">This state's requirement changes depending on your answer.</span>
+                    </label>
+                    <select id="variant"></select>
+                </div>
+
+                <div class="calc-row">
+                    <div class="calc-field">
+                        <label for="total">Total hours logged so far</label>
+                        <input type="number" id="total" min="0" max="1000" step="0.5" inputmode="decimal" placeholder="0">
+                    </div>
+                    <div class="calc-field">
+                        <label for="night">Night hours logged so far</label>
+                        <input type="number" id="night" min="0" max="1000" step="0.5" inputmode="decimal" placeholder="0">
+                    </div>
+                </div>
+                <p class="calc-note">Night hours are part of your total, not extra on top of it. If you've driven 20 hours and 4 of them were after dark, enter 20 and 4.</p>
+
+                <div class="calc-field" style="margin-top: 1.25rem;">
+                    <label for="pace">Hours you drive per week <span style="font-weight:400; color: var(--text-muted);">(optional)</span>
+                        <span class="hint">Used to estimate when you'll finish.</span>
+                    </label>
+                    <input type="number" id="pace" min="0" max="100" step="0.5" inputmode="decimal" placeholder="e.g. 3">
+                </div>
+
+                <div class="calc-results" id="results" aria-live="polite">
+                    <p class="text-muted">Select your state to see how many hours you have left.</p>
+                </div>
+            </div>
+
+            <div class="callout" style="margin-top: 1.5rem;">
+                <p><strong>Requirements shown are approximate. Always confirm the current requirement with your state's DMV/RMV/DPS before your road test.</strong> States revise hour requirements, night definitions, and driver-education exemptions more often than any website keeps up with, and several states reduce the total if you complete an approved course.</p>
+            </div>
+
+            <div class="text-center" style="margin: 2.5rem 0;">
+                <h2>Track your hours automatically in PermitReady — free on iPhone</h2>
+                <p class="text-muted mb-3">Log each drive with its date, duration, and conditions, watch the running total climb, and send a copy to a parent by AirDrop, Messages, or Mail. No account, no sign-in, works offline.</p>
+                <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="btn btn-primary btn-large">Download PermitReady Free</a>
+                <p class="calc-note" style="margin-top: 0.75rem;">Drives are entered by hand — PermitReady doesn't use GPS and never asks for location permission.</p>
+            </div>
+        </div>
+
+        <h2>How to use the numbers</h2>
+        <ul>
+            <li><strong>Night hours count toward your total.</strong> A 50-hour requirement with a 10-hour night minimum means 50 hours total, at least 10 of them after dark — not 60.</li>
+            <li><strong>Check what your state means by "night."</strong> Many states define it as beginning 30 minutes after sunset and ending 30 minutes before sunrise; others use fixed clock times. A drive that ends at dusk may not count.</li>
+            <li><strong>Driver education often reduces the requirement.</strong> Texas drops to 10 hours with a driver education course, and Massachusetts reduces its total for teens who complete an approved driver skills program. Several other states have similar provisions.</li>
+            <li><strong>Some states cap how much counts per day.</strong> Ohio, for example, limits how many hours can be credited in a single day, so a marathon Saturday won't clear your requirement in one go.</li>
+            <li><strong>A parent usually has to sign.</strong> In most states the licensing office collects a signed certification of hours rather than the log itself. The log is what you fill that form in from.</li>
+        </ul>
+
+        <h2>Frequently asked</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">Do night hours count toward my total?</h3>
+                <p class="faq-answer">Yes, in nearly every state. Night hours are a subset of the total, not an addition to it. This calculator treats them that way.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What counts as night driving?</h3>
+                <p class="faq-answer">Usually a window defined relative to sunset and sunrise — commonly from 30 minutes after sunset to 30 minutes before sunrise. Some states use fixed times instead. Check your state's handbook for its exact definition.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Does the DMV actually check the log?</h3>
+                <p class="faq-answer">In most states a parent or guardian signs a certification of total hours, and that form is what the office collects. The log usually is not audited line by line, though some offices ask to see it and some states require specific breakdowns.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Why does this calculator say "approximate"?</h3>
+                <p class="faq-answer">Because hour requirements change, and because many states have exemptions and reductions tied to driver education, age, or program completion that a dropdown can't capture. Treat the result as a planning figure and verify with your licensing agency.</p>
+            </div>
+        </div>
+
+        <p style="margin-top:2rem;"><a href="/permitready/driving-log/">More about the PermitReady driving hours log</a> &middot; <a href="/permitready/#states-covered">State-by-state permit test pages</a> &middot; <a href="/permitready/help/switching-from-roadready/">Moving hours from another app</a></p>
+
+        <div class="legal-section" style="margin-top: 3rem;">
+            <h3>Important Notice</h3>
+            <ul>
+                <li>Hour requirements in this calculator are approximate figures compiled for planning purposes and are not legal advice. Verify with your state licensing agency.</li>
+                <li>PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency.</li>
+                <li>No state has formally approved or rejected PermitReady's driving log as a substitute for an official state form. Always confirm with your state agency what log format they accept.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Permit test practice and a supervised driving hours log, in one free iPhone app. No account, no sign-in, works offline.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/about/">About</a></li>
+                        <li><a href="/permitready/driving-log/">Driving Hours Log</a></li>
+                        <li><a href="/permitready/compare/permitready-vs-roadready/">PermitReady vs RoadReady</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/permitready/terms.html">Terms of Service</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+(function () {
+    "use strict";
+
+    // Approximate supervised-driving requirements. total = total hours,
+    // night = night-hours minimum (null = state does not publish one we can cite).
+    // variants = alternate requirements the user picks between.
+    var FALLBACK = { total: 40, night: null, fallback: true };
+
+    var STATES = {
+        "Alabama": FALLBACK,
+        "Alaska": FALLBACK,
+        "Arizona": FALLBACK,
+        "Arkansas": FALLBACK,
+        "California": { total: 50, night: 10 },
+        "Colorado": FALLBACK,
+        "Connecticut": FALLBACK,
+        "Delaware": FALLBACK,
+        "District of Columbia": FALLBACK,
+        "Florida": { total: 50, night: 10 },
+        "Georgia": { total: 40, night: 6 },
+        "Hawaii": FALLBACK,
+        "Idaho": FALLBACK,
+        "Illinois": { total: 50, night: 10 },
+        "Indiana": FALLBACK,
+        "Iowa": FALLBACK,
+        "Kansas": FALLBACK,
+        "Kentucky": FALLBACK,
+        "Louisiana": FALLBACK,
+        "Maine": FALLBACK,
+        "Maryland": FALLBACK,
+        "Massachusetts": {
+            variants: [
+                { label: "Standard requirement", total: 40, night: 10 },
+                { label: "Completed an approved driver skills program", total: 30, night: 10 }
+            ],
+            note: "Massachusetts reduces the total for teens who complete an approved driver skills program."
+        },
+        "Michigan": { total: 50, night: 10 },
+        "Minnesota": FALLBACK,
+        "Mississippi": FALLBACK,
+        "Missouri": FALLBACK,
+        "Montana": FALLBACK,
+        "Nebraska": FALLBACK,
+        "Nevada": FALLBACK,
+        "New Hampshire": FALLBACK,
+        "New Jersey": FALLBACK,
+        "New Mexico": FALLBACK,
+        "New York": { total: 50, night: 15 },
+        "North Carolina": { total: 60, night: 10 },
+        "North Dakota": FALLBACK,
+        "Ohio": {
+            total: 50,
+            night: 10,
+            note: "Ohio also caps how many hours can be credited in a single day (commonly 4), so hours logged beyond that in one day may not count."
+        },
+        "Oklahoma": FALLBACK,
+        "Oregon": FALLBACK,
+        "Pennsylvania": { total: 65, night: 10 },
+        "Rhode Island": FALLBACK,
+        "South Carolina": FALLBACK,
+        "South Dakota": FALLBACK,
+        "Tennessee": FALLBACK,
+        "Texas": {
+            variants: [
+                { label: "With driver education", total: 10, night: null },
+                { label: "Without driver education", total: 30, night: null }
+            ],
+            note: "Texas requirements depend on whether you complete a driver education course."
+        },
+        "Utah": FALLBACK,
+        "Vermont": FALLBACK,
+        "Virginia": { total: 45, night: 15 },
+        "Washington": { total: 50, night: 10 },
+        "West Virginia": FALLBACK,
+        "Wisconsin": { total: 50, night: 10 },
+        "Wyoming": FALLBACK
+    };
+
+    var stateSel = document.getElementById("state");
+    var variantWrap = document.getElementById("variant-wrap");
+    var variantSel = document.getElementById("variant");
+    var totalIn = document.getElementById("total");
+    var nightIn = document.getElementById("night");
+    var paceIn = document.getElementById("pace");
+    var out = document.getElementById("results");
+
+    Object.keys(STATES).forEach(function (name) {
+        var o = document.createElement("option");
+        o.value = name;
+        o.textContent = name;
+        stateSel.appendChild(o);
+    });
+
+    function num(el) {
+        var v = parseFloat(el.value);
+        if (isNaN(v) || v < 0) { return 0; }
+        return v;
+    }
+
+    function fmt(n) {
+        var r = Math.round(n * 10) / 10;
+        return (r % 1 === 0) ? String(r) : r.toFixed(1);
+    }
+
+    function currentRequirement() {
+        var s = STATES[stateSel.value];
+        if (!s) { return null; }
+        if (s.variants) {
+            var v = s.variants[parseInt(variantSel.value, 10) || 0];
+            return { total: v.total, night: v.night, note: s.note, fallback: false, variantLabel: v.label };
+        }
+        return { total: s.total, night: s.night, note: s.note, fallback: !!s.fallback };
+    }
+
+    function buildVariants() {
+        var s = STATES[stateSel.value];
+        variantSel.innerHTML = "";
+        if (s && s.variants) {
+            s.variants.forEach(function (v, i) {
+                var o = document.createElement("option");
+                o.value = String(i);
+                o.textContent = v.label + " — " + v.total + " hours";
+                variantSel.appendChild(o);
+            });
+            variantWrap.hidden = false;
+        } else {
+            variantWrap.hidden = true;
+        }
+    }
+
+    function barHTML(done, needed) {
+        var pct = needed > 0 ? Math.min(100, (done / needed) * 100) : 100;
+        var cls = pct >= 100 ? "bar done" : "bar";
+        return '<div class="' + cls + '"><span style="width:' + pct.toFixed(1) + '%"></span></div>';
+    }
+
+    function projection(remaining, pace) {
+        if (!(pace > 0) || remaining <= 0) { return ""; }
+        var weeks = remaining / pace;
+        var d = new Date();
+        d.setDate(d.getDate() + Math.ceil(weeks * 7));
+        var opts = { year: "numeric", month: "long", day: "numeric" };
+        var when;
+        try { when = d.toLocaleDateString("en-US", opts); }
+        catch (e) { when = d.toDateString(); }
+        return '<div class="callout"><p>At <strong>' + fmt(pace) + ' hours a week</strong>, you\'d reach the total requirement in about <strong>' +
+            fmt(Math.ceil(weeks)) + ' week' + (Math.ceil(weeks) === 1 ? '' : 's') + '</strong> — around <strong>' + when +
+            '</strong>. That assumes you keep the pace up and that your night hours keep up too.</p></div>';
+    }
+
+    function render() {
+        var req = currentRequirement();
+        if (!req) {
+            out.innerHTML = '<p class="text-muted">Select your state to see how many hours you have left.</p>';
+            return;
+        }
+
+        var loggedTotal = num(totalIn);
+        var loggedNight = num(nightIn);
+        var pace = num(paceIn);
+
+        var html = "";
+
+        // Requirement summary
+        var reqText = "<strong>" + stateSel.value + ":</strong> approximately <strong>" + req.total + " total hours</strong>";
+        if (req.night !== null && req.night !== undefined) {
+            reqText += ", including at least <strong>" + req.night + " night hours</strong>";
+        } else {
+            reqText += ". Night-hours minimum: <strong>not listed here — verify with your state</strong>";
+        }
+        reqText += ".";
+        if (req.variantLabel) { reqText += " <span class=\"text-muted\">(" + req.variantLabel + ")</span>"; }
+        if (req.fallback) {
+            reqText += '<br><span class="text-muted">We don\'t have a verified figure for this state, so this shows the common 40-hour baseline. Confirm the real number with your state agency before relying on it.</span>';
+        }
+        if (req.note) {
+            reqText += '<br><span class="text-muted">' + req.note + '</span>';
+        }
+        html += '<div class="req-line">' + reqText + '</div>';
+
+        // Total hours
+        var remainingTotal = Math.max(0, req.total - loggedTotal);
+        html += '<div class="result-block">' +
+            '<div class="result-head"><span class="label">Total hours remaining</span><span class="value">' +
+            fmt(remainingTotal) + ' of ' + req.total + '</span></div>' +
+            barHTML(loggedTotal, req.total) +
+            '<p class="bar-caption">' + fmt(Math.min(loggedTotal, req.total)) + ' logged' +
+            (loggedTotal > req.total ? ' (' + fmt(loggedTotal) + ' entered, ' + fmt(loggedTotal - req.total) + ' above the requirement)' : '') +
+            '</p></div>';
+
+        // Night hours
+        if (req.night !== null && req.night !== undefined) {
+            var remainingNight = Math.max(0, req.night - loggedNight);
+            html += '<div class="result-block">' +
+                '<div class="result-head"><span class="label">Night hours remaining</span><span class="value">' +
+                fmt(remainingNight) + ' of ' + req.night + '</span></div>' +
+                barHTML(loggedNight, req.night) +
+                '<p class="bar-caption">' + fmt(Math.min(loggedNight, req.night)) + ' night hours logged</p></div>';
+        } else {
+            html += '<div class="result-block"><div class="result-head"><span class="label">Night hours</span>' +
+                '<span class="value">' + fmt(loggedNight) + ' logged</span></div>' +
+                '<p class="bar-caption">No night-hours minimum listed for this state here. Most states have one — check your state handbook.</p></div>';
+        }
+
+        // Sanity check
+        if (loggedNight > loggedTotal) {
+            html += '<div class="callout"><p>Your night hours are higher than your total hours. Night hours are counted as part of the total, so the total should be at least as large.</p></div>';
+        }
+
+        // Completion status
+        var totalDone = loggedTotal >= req.total;
+        var nightDone = (req.night === null || req.night === undefined) ? true : loggedNight >= req.night;
+        if (totalDone && nightDone) {
+            html += '<div class="callout success"><p><strong>You\'ve met the approximate requirement.</strong> Before you book the road test, confirm the current hour requirement and the accepted log format with your state agency — and check whether a parent or guardian needs to sign a certification form.</p></div>';
+        } else if (totalDone && !nightDone) {
+            html += '<div class="callout"><p>Your total is there, but you still need about <strong>' + fmt(Math.max(0, req.night - loggedNight)) + ' more night hours</strong>. Night hours are the ones people run short on — plan a few evening drives.</p></div>';
+        }
+
+        html += projection(remainingTotal, pace);
+
+        out.innerHTML = html;
+    }
+
+    stateSel.addEventListener("change", function () { buildVariants(); render(); });
+    variantSel.addEventListener("change", render);
+    [totalIn, nightIn, paceIn].forEach(function (el) {
+        el.addEventListener("input", render);
+    });
+
+    render();
+})();
+</script>
+</body>
+</html>
