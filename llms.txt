@@ -78,6 +78,7 @@ PermitReady is a free iOS app that helps teens study for their driver's permit (
 
 
 
+
 ### Reddit-Style Community Q&A Pages
 
 Honest, conversational Q&A pages written for people searching "[state] permit test reddit" — what the test is actually like, common mistakes, and what people recommend for studying.
@@ -112,6 +113,11 @@ Honest, conversational Q&A pages written for people searching "[state] permit te
 - [Nebraska DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/nebraska/reddit/)
 - [Nevada DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/nevada/reddit/)
 - [New Hampshire DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/new-hampshire/reddit/)
+- [New Jersey MVC Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/new-jersey/reddit/)
+- [New Mexico MVD Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/new-mexico/reddit/)
+- [New York DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/new-york/reddit/)
+- [North Carolina NCDMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/north-carolina/reddit/)
+- [North Dakota DMV Permit Test Reddit — Tips From Real Test-Takers](https://techsmog.com/permitready/states/north-dakota/reddit/)
 
 ## Contact
 
