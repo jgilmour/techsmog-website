@@ -511,10 +511,22 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/south-carolina/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/south-dakota/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techsmog.com/permitready/states/south-dakota/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://techsmog.com/permitready/states/tennessee/</loc>
@@ -523,16 +535,34 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/tennessee/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/texas/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://techsmog.com/permitready/states/texas/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://techsmog.com/permitready/states/utah/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techsmog.com/permitready/states/utah/reddit/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://techsmog.com/permitready/states/vermont/</loc>
