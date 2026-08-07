@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervised Driving Hours by State: Complete 2026 Requirements</title>
+    <meta name="description" content="Supervised driving hours required in all 50 states plus DC for 2026: total hours, night hours, daily caps, and reduced-hour options through driver education. Sortable table with sources.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TechSmog">
+    <meta name="application-name" content="PermitReady">
+    <link rel="canonical" href="https://techsmog.com/permitready/guides/supervised-driving-hours-by-state/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Supervised Driving Hours by State: Complete 2026 Requirements">
+    <meta property="og:description" content="Total hours, night hours, daily caps, and reduced-hour options for all 50 states plus DC, in one sortable table.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techsmog.com/permitready/guides/supervised-driving-hours-by-state/">
+    <meta property="og:image" content="https://techsmog.com/permitready/images/appstore.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="TechSmog">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Supervised Driving Hours by State: Complete 2026 Requirements">
+    <meta name="twitter:description" content="Total hours, night hours, daily caps, and reduced-hour options for all 50 states plus DC.">
+    <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
+    {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
+    {"@type": "ListItem", "position": 3, "name": "Guides", "item": "https://techsmog.com/permitready/guides/supervised-driving-hours-by-state/"},
+    {"@type": "ListItem", "position": 4, "name": "Supervised Driving Hours by State", "item": "https://techsmog.com/permitready/guides/supervised-driving-hours-by-state/"}
+  ]
+}
+    </script>
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many supervised driving hours do most states require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most states require between 40 and 65 hours of supervised driving before a teen can apply for a full license, and roughly half of states land at exactly 50 hours. Almost all require at least 10 of those hours to be at night."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which state requires the most supervised driving hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oregon requires the most at 100 hours for teens without an approved driver education course, dropping to 50 hours with one. Maine requires 70 hours and Pennsylvania requires 65. At the other end, Texas requires 30 hours, or as few as 10 behind-the-wheel hours through an approved driver education course."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many night hours do states require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ten is the most common night-hour minimum. New York, Maryland, Louisiana, Minnesota, and Virginia require 15, and Georgia requires 6. States define night differently: New York uses sunset to sunrise, while California counts only driving between 11 PM and 5 AM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can driver education reduce the required hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In several states, yes. Massachusetts drops from 40 to 30 hours with an RMV-certified driver skills program, Oregon from 100 to 50 with an approved course, Minnesota from 50 to 40 if a parent completes an awareness class, and Texas allows as few as 10 behind-the-wheel hours through approved driver education. Most states offer no reduction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do any states cap how many hours can be logged in one day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ohio is the state most commonly cited for a daily cap, generally around 4 hours credited per day, so a single long road trip cannot fill the requirement. Most states publish no daily cap, but logging 12 hours in a day still looks implausible to a reviewer. Spread the hours out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do supervised hours have to be logged on a state form?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the state. Massachusetts and New York publish official log documents, while California mandates no particular form and accepts a personal log certified by a parent on the license application. Check your own agency before assuming a generic log will be accepted."
+      }
+    }
+  ]
+}
+    </script>
+
+    <link rel="stylesheet" href="/permitready/styles.css?v=6">
+    <style>
+        .state-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+        .state-table { width: 100%; border-collapse: collapse; min-width: 860px; }
+        .state-table th, .state-table td { border: 1px solid var(--border-color); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; font-size: 0.92rem; }
+        .state-table thead th { background: var(--background-alt); font-weight: 700; cursor: pointer; user-select: none; white-space: nowrap; }
+        .state-table thead th:hover { color: var(--primary-color); }
+        .state-table thead th::after { content: " \2195"; opacity: 0.4; font-size: 0.8em; }
+        .state-table thead th[aria-sort="ascending"]::after { content: " \2191"; opacity: 1; }
+        .state-table thead th[aria-sort="descending"]::after { content: " \2193"; opacity: 1; }
+        .state-table tbody th { font-weight: 600; background: var(--background-alt); white-space: nowrap; }
+        .answer-box { background: var(--background-alt); border-left: 4px solid var(--primary-color); border-radius: var(--radius-sm); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .answer-box p:last-child { margin-bottom: 0; }
+        .verified-note { font-size: 0.9rem; color: var(--text-muted); }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .stat-card { border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem 1.25rem; }
+        .stat-card .num { font-size: 1.9rem; font-weight: 700; color: var(--primary-color); line-height: 1.1; }
+        .stat-card .lbl { font-size: 0.9rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">
+                    <img src="/permitready/images/appstore.png" alt="PermitReady icon" class="logo-icon">
+                    PermitReady
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/permitready/">Home</a></li>
+                    <li><a href="/permitready/driving-log/">Driving Log</a></li>
+                    <li><a href="/permitready/driving-log/calculator/">Calculator</a></li>
+                    <li><a href="/permitready/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Supervised Driving Hours Required by State (2026)</h1>
+            <p>Total hours, night hours, daily caps, and the driver-education shortcuts &mdash; all 50 states plus DC in one sortable table.</p>
+        </div>
+    </section>
+
+    <main class="container privacy-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <p class="text-muted"><a href="/">TechSmog Apps</a> &rsaquo; <a href="/permitready/">PermitReady</a> &rsaquo; Guides &rsaquo; Supervised Driving Hours by State</p>
+        </nav>
+
+        <div class="answer-box">
+            <p><strong>Most states require between 40 and 65 hours of supervised driving before a teen can apply for a full license. Roughly half of states land at 50 hours, and almost all require at least 10 of those hours to be at night.</strong> The outliers matter: Oregon asks for 100 hours without driver education, Maine 70, Pennsylvania 65, and Texas as few as 10 behind-the-wheel hours with an approved course.</p>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card"><div class="num">50</div><div class="lbl">Most common total requirement</div></div>
+            <div class="stat-card"><div class="num">10</div><div class="lbl">Most common night minimum</div></div>
+            <div class="stat-card"><div class="num">100</div><div class="lbl">Highest total (Oregon, without driver ed)</div></div>
+            <div class="stat-card"><div class="num">15</div><div class="lbl">Highest common night minimum (NY, MD, LA, MN, VA)</div></div>
+        </div>
+
+        <h2>Supervised driving hours by state</h2>
+        <p>Click any column heading to sort. Five states are verified against their agency websites as of August 2026 and link to a detailed requirements page; the rest are drawn from PermitReady's state pages, marked approximate, and should be confirmed with the agency named in the source column.</p>
+        <div class="state-table-wrap">
+            <table class="state-table" id="hours-table" data-verified="2026-08">
+                <caption class="verified-note" style="text-align:left; padding-bottom:0.5rem;">Supervised driving requirements for teen drivers, all 50 states plus the District of Columbia.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" data-type="text" aria-sort="ascending">State</th>
+                        <th scope="col" data-type="num">Total hours</th>
+                        <th scope="col" data-type="num">Night hours</th>
+                        <th scope="col" data-type="text">Daily cap</th>
+                        <th scope="col" data-type="text">Reduced-hours option</th>
+                        <th scope="col" data-type="text">Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row" data-sort="Alabama"><a href="/permitready/states/alabama/">Alabama</a></th><td data-sort="50">50</td><td data-sort="-1">Not published</td><td>None published</td><td>Approved driver education course may substitute</td><td>Approx. &mdash; verify with the Alabama Law Enforcement Agency</td></tr>
+                    <tr><th scope="row" data-sort="Alaska"><a href="/permitready/states/alaska/">Alaska</a></th><td data-sort="40">40</td><td data-sort="10">10 challenging conditions</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Arizona"><a href="/permitready/states/arizona/">Arizona</a></th><td data-sort="30">30</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Motor Vehicle Division</td></tr>
+                    <tr><th scope="row" data-sort="Arkansas"><a href="/permitready/states/arkansas/">Arkansas</a></th><td data-sort="-1">Verify</td><td data-sort="-1">Verify</td><td>Verify</td><td>Verify</td><td>Approx. &mdash; verify with the Department of Finance and Administration</td></tr>
+                    <tr><th scope="row" data-sort="California"><a href="/permitready/states/california/driving-hours/">California</a></th><td data-sort="50">50 (+6 professional)</td><td data-sort="10">10 (11 PM&ndash;5 AM)</td><td>None published</td><td>None &mdash; 6 professional hours are additional</td><td><a href="https://www.dmv.ca.gov/portal/driver-education-and-safety/educational-materials/fast-facts/" rel="nofollow noopener" target="_blank">California DMV</a> &mdash; verified Aug 2026</td></tr>
+                    <tr><th scope="row" data-sort="Colorado"><a href="/permitready/states/colorado/">Colorado</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Connecticut"><a href="/permitready/states/connecticut/">Connecticut</a></th><td data-sort="40">40</td><td data-sort="-1">Not published</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Delaware"><a href="/permitready/states/delaware/">Delaware</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="District of Columbia"><a href="/permitready/states/district-of-columbia/">District of Columbia</a></th><td data-sort="40">40</td><td data-sort="-1">Not published</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Florida"><a href="/permitready/states/florida/driving-hours/">Florida</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None</td><td><a href="https://www.flhsmv.gov/driver-licenses-id-cards/teens/" rel="nofollow noopener" target="_blank">Florida DHSMV</a> &mdash; verified Aug 2026</td></tr>
+                    <tr><th scope="row" data-sort="Georgia"><a href="/permitready/states/georgia/">Georgia</a></th><td data-sort="40">40</td><td data-sort="6">6</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Driver Services</td></tr>
+                    <tr><th scope="row" data-sort="Hawaii"><a href="/permitready/states/hawaii/">Hawaii</a></th><td data-sort="-1">Verify</td><td data-sort="-1">Verify</td><td>Verify</td><td>Verify</td><td>Approx. &mdash; verify with the Department of Transportation</td></tr>
+                    <tr><th scope="row" data-sort="Idaho"><a href="/permitready/states/idaho/">Idaho</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Idaho Transportation Department</td></tr>
+                    <tr><th scope="row" data-sort="Illinois"><a href="/permitready/states/illinois/">Illinois</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Secretary of State</td></tr>
+                    <tr><th scope="row" data-sort="Indiana"><a href="/permitready/states/indiana/">Indiana</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Bureau of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Iowa"><a href="/permitready/states/iowa/">Iowa</a></th><td data-sort="-1">Verify</td><td data-sort="-1">Verify</td><td>Verify</td><td>Verify</td><td>Approx. &mdash; verify with the Department of Transportation</td></tr>
+                    <tr><th scope="row" data-sort="Kansas"><a href="/permitready/states/kansas/">Kansas</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Revenue</td></tr>
+                    <tr><th scope="row" data-sort="Kentucky"><a href="/permitready/states/kentucky/">Kentucky</a></th><td data-sort="60">60</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Driver Licensing Regional Offices</td></tr>
+                    <tr><th scope="row" data-sort="Louisiana"><a href="/permitready/states/louisiana/">Louisiana</a></th><td data-sort="50">50</td><td data-sort="15">15</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Office of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Maine"><a href="/permitready/states/maine/">Maine</a></th><td data-sort="70">70</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Bureau of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Maryland"><a href="/permitready/states/maryland/">Maryland</a></th><td data-sort="60">60</td><td data-sort="15">15</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Motor Vehicle Administration</td></tr>
+                    <tr><th scope="row" data-sort="Massachusetts"><a href="/permitready/states/massachusetts/driving-hours/">Massachusetts</a></th><td data-sort="40">40</td><td data-sort="10">10</td><td>None published</td><td><strong>30 hours</strong> with an RMV-certified driver skills program</td><td><a href="https://www.mass.gov/info-details/junior-operator-license-jol-requirements" rel="nofollow noopener" target="_blank">Massachusetts RMV</a> &mdash; verified Aug 2026</td></tr>
+                    <tr><th scope="row" data-sort="Michigan"><a href="/permitready/states/michigan/">Michigan</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Secretary of State</td></tr>
+                    <tr><th scope="row" data-sort="Minnesota"><a href="/permitready/states/minnesota/">Minnesota</a></th><td data-sort="50">50</td><td data-sort="15">15</td><td>None published</td><td><strong>40 hours</strong> if a parent completes the approved awareness class</td><td>Approx. &mdash; verify with the Driver and Vehicle Services</td></tr>
+                    <tr><th scope="row" data-sort="Mississippi"><a href="/permitready/states/mississippi/">Mississippi</a></th><td data-sort="-1">Verify</td><td data-sort="-1">Verify</td><td>Verify</td><td>Verify</td><td>Approx. &mdash; verify with the Department of Public Safety</td></tr>
+                    <tr><th scope="row" data-sort="Missouri"><a href="/permitready/states/missouri/">Missouri</a></th><td data-sort="40">40</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Revenue</td></tr>
+                    <tr><th scope="row" data-sort="Montana"><a href="/permitready/states/montana/">Montana</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Motor Vehicle Division</td></tr>
+                    <tr><th scope="row" data-sort="Nebraska"><a href="/permitready/states/nebraska/">Nebraska</a></th><td data-sort="50">50</td><td data-sort="10">10 (sunset&ndash;sunrise)</td><td>None published</td><td>Driver safety school may substitute for the 50-hour certification</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Nevada"><a href="/permitready/states/nevada/">Nevada</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="New Hampshire"><a href="/permitready/states/new-hampshire/">New Hampshire</a></th><td data-sort="40">40</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="New Jersey"><a href="/permitready/states/new-jersey/">New Jersey</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Motor Vehicle Commission</td></tr>
+                    <tr><th scope="row" data-sort="New Mexico"><a href="/permitready/states/new-mexico/">New Mexico</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Motor Vehicle Division</td></tr>
+                    <tr><th scope="row" data-sort="New York"><a href="/permitready/states/new-york/driving-hours/">New York</a></th><td data-sort="50">50</td><td data-sort="15">15 (sunset&ndash;sunrise)</td><td>None published</td><td>None</td><td><a href="https://dmv.ny.gov/driver-license/supervised-driving-requirements" rel="nofollow noopener" target="_blank">New York DMV</a> &mdash; verified Aug 2026</td></tr>
+                    <tr><th scope="row" data-sort="North Carolina"><a href="/permitready/states/north-carolina/">North Carolina</a></th><td data-sort="60">60</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="North Dakota"><a href="/permitready/states/north-dakota/">North Dakota</a></th><td data-sort="50">50</td><td data-sort="-1">Not published</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Transportation</td></tr>
+                    <tr><th scope="row" data-sort="Ohio"><a href="/permitready/states/ohio/">Ohio</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>Commonly 4 hours per day</td><td>None published</td><td>Approx. &mdash; verify with the Bureau of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Oklahoma"><a href="/permitready/states/oklahoma/">Oklahoma</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Service Oklahoma</td></tr>
+                    <tr><th scope="row" data-sort="Oregon"><a href="/permitready/states/oregon/">Oregon</a></th><td data-sort="100">100</td><td data-sort="-1">Not published</td><td>None published</td><td><strong>50 hours</strong> with an ODOT-approved driver education course</td><td>Approx. &mdash; verify with the Driver and Motor Vehicle Services</td></tr>
+                    <tr><th scope="row" data-sort="Pennsylvania"><a href="/permitready/states/pennsylvania/">Pennsylvania</a></th><td data-sort="65">65</td><td data-sort="10">10 (+5 bad weather)</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Pennsylvania Department of Transportation</td></tr>
+                    <tr><th scope="row" data-sort="Rhode Island"><a href="/permitready/states/rhode-island/">Rhode Island</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="South Carolina"><a href="/permitready/states/south-carolina/">South Carolina</a></th><td data-sort="40">40</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="South Dakota"><a href="/permitready/states/south-dakota/">South Dakota</a></th><td data-sort="50">50</td><td data-sort="10">10 (+10 inclement)</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Public Safety</td></tr>
+                    <tr><th scope="row" data-sort="Tennessee"><a href="/permitready/states/tennessee/">Tennessee</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Safety and Homeland Security</td></tr>
+                    <tr><th scope="row" data-sort="Texas"><a href="/permitready/states/texas/driving-hours/">Texas</a></th><td data-sort="30">30</td><td data-sort="10">10</td><td>None published</td><td><strong>10 hours</strong> through an approved driver education course</td><td><a href="https://www.dps.texas.gov/section/driver-license/teens" rel="nofollow noopener" target="_blank">Texas DPS</a> &mdash; verified Aug 2026</td></tr>
+                    <tr><th scope="row" data-sort="Utah"><a href="/permitready/states/utah/">Utah</a></th><td data-sort="40">40</td><td data-sort="10">10 after sunset</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Driver License Division</td></tr>
+                    <tr><th scope="row" data-sort="Vermont"><a href="/permitready/states/vermont/">Vermont</a></th><td data-sort="40">40</td><td data-sort="10">10</td><td>None published</td><td>Separate from 6 hours of driver-training instruction</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Virginia"><a href="/permitready/states/virginia/">Virginia</a></th><td data-sort="45">45</td><td data-sort="15">15</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Washington"><a href="/permitready/states/washington/">Washington</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Licensing</td></tr>
+                    <tr><th scope="row" data-sort="West Virginia"><a href="/permitready/states/west-virginia/">West Virginia</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>Approved driver education course may substitute</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Wisconsin"><a href="/permitready/states/wisconsin/">Wisconsin</a></th><td data-sort="50">50</td><td data-sort="10">10 (darkness)</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Division of Motor Vehicles</td></tr>
+                    <tr><th scope="row" data-sort="Wyoming"><a href="/permitready/states/wyoming/">Wyoming</a></th><td data-sort="50">50</td><td data-sort="10">10</td><td>None published</td><td>None published</td><td>Approx. &mdash; verify with the Department of Transportation</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="verified-note">"Verify" means we do not have a figure we can source honestly for that state. "Not published" means the state sets a total but does not publish a separate night minimum we can cite. Neither means the requirement is zero.</p>
+
+        <h2>What the spread actually tells you</h2>
+        <p>Three patterns run through the table:</p>
+        <ul>
+            <li><strong>50 is the default.</strong> More than half of jurisdictions settled on 50 total hours with 10 at night, which is roughly what the research on graduated licensing supports. If you are planning before you know your exact number, plan for 50/10 and adjust.</li>
+            <li><strong>Driver education is the lever.</strong> The biggest reductions come from approved courses: Oregon halves 100 to 50, Massachusetts drops 40 to 30, Minnesota 50 to 40, and Texas allows the behind-the-wheel portion to shrink to 10 hours. In states where the course is optional, the arithmetic often favors taking it.</li>
+            <li><strong>Night hours are the real constraint.</strong> Almost nobody fails to reach the total; plenty of families arrive at the road test short on night hours. Fifteen-hour states (New York, Maryland, Louisiana, Minnesota, Virginia) are the ones that bite, and California's 11 PM&ndash;5 AM definition is stricter than the sunset-to-sunrise rule everyone assumes.</li>
+        </ul>
+
+        <h2>How states define a "night" hour</h2>
+        <p>This is the most common source of a rejected or re-done log:</p>
+        <ul>
+            <li><strong>Sunset to sunrise</strong> &mdash; the most common definition, used by New York and Nebraska among others. What counts shifts with the calendar, which makes winter the efficient time to bank night hours.</li>
+            <li><strong>A fixed clock window</strong> &mdash; California counts 11 PM to 5 AM only. A 7 PM December drive is dark, and does not count.</li>
+            <li><strong>"After sunset"</strong> &mdash; Utah's phrasing, effectively the same as sunset-to-sunrise for practical purposes.</li>
+            <li><strong>"Darkness"</strong> &mdash; Wisconsin's wording, which follows actual conditions rather than a clock.</li>
+        </ul>
+        <p>If your state's wording is ambiguous, log the actual clock time of every drive. A log with start and end times can be re-interpreted under any definition; a log that just says "night" cannot.</p>
+
+        <h2>Conditions beyond night</h2>
+        <p>A few states require specific conditions on top of the night minimum. Pennsylvania wants 5 of its 65 hours in bad weather. South Dakota wants 10 inclement-weather hours alongside 10 night hours. Alaska frames its 10 extra hours as "progressively challenging conditions," which includes both night and weather. North Dakota asks for practice in variable conditions. If you live somewhere it rains twice a year, these are worth planning around rather than hoping for.</p>
+
+        <h2>Tracking against your state's number</h2>
+        <p>Knowing the number is the easy half. The <a href="/permitready/driving-log/calculator/">supervised hours calculator</a> subtracts what you have already logged and tells you how many total and night hours are left, plus a projected finish date at your current pace.</p>
+        <p><a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311">PermitReady</a> is a free iPhone and iPad app that logs each drive with date, duration, and condition tags, keeps a running total, and works with no account and no internet. It also covers permit test practice for all 50 states plus DC, which is the part that comes first. It does not log drives automatically, does not use GPS, is iOS only, and does not generate a signed state form &mdash; it is the record you fill that form in from.</p>
+        <p>Prefer paper? The <a href="/permitready/driving-log/printable/">printable log templates page</a> has a generic form plus links to each state's official document.</p>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">How many supervised driving hours do most states require?</h3>
+                <p class="faq-answer">Between 40 and 65, with about half of states at exactly 50. Almost all require at least 10 hours at night.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Which state requires the most hours?</h3>
+                <p class="faq-answer">Oregon, at 100 hours without an approved driver education course &mdash; halved to 50 with one. Maine (70) and Pennsylvania (65) come next.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Which state requires the fewest?</h3>
+                <p class="faq-answer">Texas, where an approved driver education course can bring the logged behind-the-wheel requirement down to 10 hours. Without driver education the figure is 30, still the lowest full requirement in the country. Adults 18 and over in Texas need no learner license at all.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How many night hours will I need?</h3>
+                <p class="faq-answer">Usually 10. New York, Maryland, Louisiana, Minnesota, and Virginia require 15; Georgia requires 6. Check how your state defines night before you assume an evening drive counts.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can driver education reduce my required hours?</h3>
+                <p class="faq-answer">In several states. Massachusetts 40 to 30, Oregon 100 to 50, Minnesota 50 to 40, Texas down to 10 behind-the-wheel hours. Most states offer no reduction, and driver education is mandatory in some regardless.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Is there a limit on hours logged per day?</h3>
+                <p class="faq-answer">Ohio is the state most often cited for a daily cap, commonly around 4 hours. Most states publish none &mdash; but a reviewer who sees a 14-hour day in your log is entitled to be skeptical.</p>
+            </div>
+        </div>
+
+        <div class="hero-cta" style="margin: 2.5rem 0;">
+            <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="btn btn-primary btn-large">Download PermitReady Free</a>
+        </div>
+
+        <div class="legal-section" style="margin-top: 3rem;">
+            <h3>Verification and disclaimers</h3>
+            <p class="verified-note">Massachusetts, Texas, Florida, New York, and California verified August 2026 against their agency websites, linked in the source column. All other figures are drawn from PermitReady's state pages, are approximate, and should be confirmed with the state licensing agency before a road test. Requirements change.</p>
+            <p>PermitReady's driving hours log is a personal tracking tool. It is not a state form and has not been approved or endorsed by any state licensing agency. Check with your state's DMV, RMV, DPS, BMV, or equivalent agency for which log format they require, and use their official state form if one is mandated.</p>
+            <p>PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Permit test practice and a supervised driving hours log, in one free iPhone app. No account, no sign-in, works offline.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/about/">About</a></li>
+                        <li><a href="/permitready/driving-log/">Driving Hours Log</a></li>
+                        <li><a href="/permitready/driving-log/printable/">Printable Log Templates</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/permitready/terms.html">Terms of Service</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        "use strict";
+        var table = document.getElementById("hours-table");
+        if (!table) { return; }
+        var headers = table.querySelectorAll("thead th");
+        var tbody = table.querySelector("tbody");
+
+        function cellValue(row, index) {
+            var cell = row.children[index];
+            if (!cell) { return ""; }
+            var attr = cell.getAttribute("data-sort");
+            return attr !== null ? attr : cell.textContent.trim();
+        }
+
+        function sortBy(index, type, ascending) {
+            var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+            rows.sort(function (a, b) {
+                var va = cellValue(a, index);
+                var vb = cellValue(b, index);
+                if (type === "num") {
+                    var na = parseFloat(va);
+                    var nb = parseFloat(vb);
+                    if (isNaN(na)) { na = -1; }
+                    if (isNaN(nb)) { nb = -1; }
+                    if (na !== nb) { return ascending ? na - nb : nb - na; }
+                    return cellValue(a, 0).localeCompare(cellValue(b, 0));
+                }
+                return ascending ? va.localeCompare(vb) : vb.localeCompare(va);
+            });
+            rows.forEach(function (row) { tbody.appendChild(row); });
+        }
+
+        Array.prototype.forEach.call(headers, function (header, index) {
+            header.setAttribute("tabindex", "0");
+            header.setAttribute("role", "button");
+            function activate() {
+                var ascending = header.getAttribute("aria-sort") !== "ascending";
+                Array.prototype.forEach.call(headers, function (other) { other.removeAttribute("aria-sort"); });
+                header.setAttribute("aria-sort", ascending ? "ascending" : "descending");
+                sortBy(index, header.getAttribute("data-type") || "text", ascending);
+            }
+            header.addEventListener("click", activate);
+            header.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") { event.preventDefault(); activate(); }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

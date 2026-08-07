@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Printable Driving Log Templates &mdash; All 50 States | PermitReady</title>
+    <meta name="description" content="Free printable supervised driving log templates plus links to each state's official form. Hours required, night hours, and which states mandate a specific log format.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TechSmog">
+    <meta name="application-name" content="PermitReady">
+    <link rel="canonical" href="https://techsmog.com/permitready/driving-log/printable/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Printable Driving Log Templates — All 50 States | PermitReady">
+    <meta property="og:description" content="A printable supervised driving log you can hand a parent to sign, plus links to each state's official form and hour requirements.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://techsmog.com/permitready/driving-log/printable/">
+    <meta property="og:image" content="https://techsmog.com/permitready/images/appstore.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="TechSmog">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Free Printable Driving Log Templates — All 50 States | PermitReady">
+    <meta name="twitter:description" content="A printable supervised driving log plus links to each state's official form and hour requirements.">
+    <meta name="twitter:image" content="https://techsmog.com/permitready/images/appstore.png">
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "TechSmog Apps", "item": "https://techsmog.com/"},
+    {"@type": "ListItem", "position": 2, "name": "PermitReady", "item": "https://techsmog.com/permitready/"},
+    {"@type": "ListItem", "position": 3, "name": "Supervised Driving Hours Log", "item": "https://techsmog.com/permitready/driving-log/"},
+    {"@type": "ListItem", "position": 4, "name": "Printable Driving Log Templates", "item": "https://techsmog.com/permitready/driving-log/printable/"}
+  ]
+}
+    </script>
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does my state have an official printable driving log form?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some do. Massachusetts publishes a supervised driving log PDF at mass.gov, New York uses form MV-262, and Texas and Florida provide log forms through their agency websites. California does not mandate any specific form and accepts a personal log. For every other state, check the licensing agency website before printing a generic template."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a generic printable driving log instead of the state form?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your state does not mandate a specific form. Where a state publishes an official log or certification, use that document. A generic log is still useful as the running record you fill the official form in from, and as a paper backup for an app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information does a supervised driving log need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At minimum: the date of the drive, start and end times or total duration, whether it was day or night, the conditions such as highway, city, or rain, and the supervising driver's name and signature. Most states also want a running total and a parent or guardian certification of the total hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a paper log if I use an app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily, but a printed copy is a useful backup. Apps lose accounts, phones break, and some states require a signed paper certification regardless of how the hours were tracked. Printing a log at the end and having a parent sign it costs nothing and removes a failure point at the counter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many supervised driving hours do most states require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most states require between 40 and 65 hours, with roughly half landing at 50 hours. Nearly all set a night minimum, most commonly 10 hours. Maine requires 70, Oregon requires 100 without an approved course, and Texas requires as few as 10 behind-the-wheel hours with driver education."
+      }
+    }
+  ]
+}
+    </script>
+
+    <link rel="stylesheet" href="/permitready/styles.css?v=6">
+    <style>
+        .state-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+        .state-table { width: 100%; border-collapse: collapse; min-width: 720px; }
+        .state-table th, .state-table td { border: 1px solid var(--border-color); padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; font-size: 0.93rem; }
+        .state-table thead th { background: var(--background-alt); font-weight: 700; position: sticky; top: 0; }
+        .state-table tbody th { font-weight: 600; background: var(--background-alt); white-space: nowrap; }
+        .answer-box { background: var(--background-alt); border-left: 4px solid var(--primary-color); border-radius: var(--radius-sm); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .answer-box p:last-child { margin-bottom: 0; }
+        .verified-note { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Generic printable log */
+        .print-log { border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem; margin: 1.5rem 0; background: #fff; }
+        .print-log h3 { margin-top: 0; }
+        .print-log .meta-line { margin: 0.35rem 0 1rem; font-size: 0.95rem; }
+        .log-table { width: 100%; border-collapse: collapse; }
+        .log-table th, .log-table td { border: 1px solid #333; padding: 0.5rem; font-size: 0.85rem; text-align: left; }
+        .log-table thead th { background: #f1f1f1; }
+        .log-table td { height: 2rem; }
+        .print-actions { margin: 1rem 0 2rem; }
+        @media print {
+            .site-header, .site-footer, .hero, .print-actions, nav[aria-label="Breadcrumb"], .no-print { display: none !important; }
+            .print-log { border: none; padding: 0; }
+            .privacy-content { max-width: none; padding: 0; }
+            body { font-size: 11pt; }
+            .log-table td { height: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/permitready/" class="logo">
+                    <img src="/permitready/images/appstore.png" alt="PermitReady icon" class="logo-icon">
+                    PermitReady
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/permitready/">Home</a></li>
+                    <li><a href="/permitready/driving-log/">Driving Log</a></li>
+                    <li><a href="/permitready/driving-log/calculator/">Calculator</a></li>
+                    <li><a href="/permitready/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Free Printable Supervised Driving Log Templates</h1>
+            <p>Your state's official form where one exists, a generic printable log where it does not, and the hour requirements for all 50 states plus DC.</p>
+        </div>
+    </section>
+
+    <main class="container privacy-content">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <p class="text-muted"><a href="/">TechSmog Apps</a> &rsaquo; <a href="/permitready/">PermitReady</a> &rsaquo; <a href="/permitready/driving-log/">Driving Hours Log</a> &rsaquo; Printable Templates</p>
+        </nav>
+
+        <div class="answer-box">
+            <p>A printable driving log does three jobs: it is a <strong>backup</strong> when an app or a phone fails, it is a <strong>paper record a parent can sign</strong>, and in some states it is <strong>the required document</strong>. Below are links to each state's official form where one exists, plus a generic template you can print in one click.</p>
+        </div>
+
+        <h2>Print this log</h2>
+        <p>Use this if your state does not publish a form of its own, or as a running record you copy onto the official form later. Print one sheet per fifteen drives and keep it in the glovebox.</p>
+        <div class="print-actions no-print">
+            <button type="button" class="btn btn-primary" onclick="window.print()">Print this log</button>
+        </div>
+        <div class="print-log">
+            <h3>Supervised Driving Log</h3>
+            <p class="meta-line">Driver: ______________________________ &nbsp;&nbsp; Permit number: ______________________ &nbsp;&nbsp; Permit issue date: ______________</p>
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Start time</th>
+                        <th scope="col">End time</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Conditions (day / night / highway / rain)</th>
+                        <th scope="col">Supervisor signature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+            <p class="meta-line" style="margin-top:1rem;">Page total: __________ hours &nbsp;&nbsp; Night total: __________ hours &nbsp;&nbsp; Running total: __________ hours</p>
+            <p class="meta-line">I certify that the hours recorded above were completed under my supervision and are accurate to the best of my knowledge.</p>
+            <p class="meta-line">Parent / guardian signature: ______________________________ &nbsp;&nbsp; Date: ______________</p>
+        </div>
+        <p class="verified-note">This generic template is not a state form. If your state publishes an official log or certification, use theirs.</p>
+
+        <h2>Official state forms and hour requirements</h2>
+        <p>Five states are verified against their agency pages as of August 2026 and link to a full requirements page here. The rest are drawn from our state pages and marked approximate &mdash; check the agency site before you rely on a number.</p>
+        <div class="state-table-wrap">
+            <table class="state-table" data-verified="2026-08">
+                <caption class="verified-note" style="text-align:left; padding-bottom:0.5rem;">Supervised driving hour requirements and official log forms by state.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">State</th>
+                        <th scope="col">Hours required</th>
+                        <th scope="col">Night hours</th>
+                        <th scope="col">Official form</th>
+                        <th scope="col">Last verified</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Alabama</th><td>50</td><td>Not published</td><td>Verify at the Alabama Law Enforcement Agency website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Alaska</th><td>40</td><td>10 in challenging conditions</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Arizona</th><td>30</td><td>10</td><td>Verify at the Motor Vehicle Division website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Arkansas</th><td>Verify with state</td><td>Verify with state</td><td>Verify at the Department of Finance and Administration website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row"><a href="/permitready/states/california/driving-hours/">California</a></th><td>50 (+6 professional)</td><td>10 (11 PM&ndash;5 AM)</td><td><strong>No required form</strong> &mdash; any log accepted</td><td>Verified Aug 2026</td></tr>
+                    <tr><th scope="row">Colorado</th><td>50</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Connecticut</th><td>40</td><td>Not published</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Delaware</th><td>50</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">District of Columbia</th><td>40</td><td>Not published</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row"><a href="/permitready/states/florida/driving-hours/">Florida</a></th><td>50</td><td>10</td><td><a href="https://www.flhsmv.gov/driver-licenses-id-cards/teens/" rel="nofollow noopener" target="_blank">FLHSMV log (flhsmv.gov)</a></td><td>Verified Aug 2026</td></tr>
+                    <tr><th scope="row">Georgia</th><td>40</td><td>6</td><td>Verify at the Department of Driver Services website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Hawaii</th><td>Verify with state</td><td>Verify with state</td><td>Verify at the Department of Transportation website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Idaho</th><td>50</td><td>10</td><td>Verify at the Idaho Transportation Department website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Illinois</th><td>50</td><td>10</td><td>Verify at the Secretary of State website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Indiana</th><td>50</td><td>10</td><td>Verify at the Bureau of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Iowa</th><td>Verify with state</td><td>Verify with state</td><td>Verify at the Department of Transportation website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Kansas</th><td>50</td><td>10</td><td>Verify at the Department of Revenue website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Kentucky</th><td>60</td><td>10</td><td>Verify at the Driver Licensing Regional Offices website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Louisiana</th><td>50</td><td>15</td><td>Verify at the Office of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Maine</th><td>70</td><td>10</td><td>Verify at the Bureau of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Maryland</th><td>60</td><td>15</td><td>Verify at the Motor Vehicle Administration website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row"><a href="/permitready/states/massachusetts/driving-hours/">Massachusetts</a></th><td>40 (30 with skills program)</td><td>10</td><td><a href="https://www.mass.gov/doc/supervised-driving-log/download" rel="nofollow noopener" target="_blank">RMV Supervised Driving Log (PDF)</a></td><td>Verified Aug 2026</td></tr>
+                    <tr><th scope="row">Michigan</th><td>50</td><td>10</td><td>Verify at the Secretary of State website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Minnesota</th><td>50 (40 with parent class)</td><td>15</td><td>Verify at the Driver and Vehicle Services website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Mississippi</th><td>Verify with state</td><td>Verify with state</td><td>Verify at the Department of Public Safety website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Missouri</th><td>40</td><td>10</td><td>Verify at the Department of Revenue website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Montana</th><td>50</td><td>10</td><td>State log PDF names RoadReady as an option &mdash; verify at <a href="https://dojmt.gov/driving/" rel="nofollow noopener" target="_blank">dojmt.gov</a></td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Nebraska</th><td>50</td><td>10 (sunset&ndash;sunrise)</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Nevada</th><td>50</td><td>10</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">New Hampshire</th><td>40</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">New Jersey</th><td>50</td><td>10</td><td>Verify at the Motor Vehicle Commission website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">New Mexico</th><td>50</td><td>10</td><td>Verify at the Motor Vehicle Division website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row"><a href="/permitready/states/new-york/driving-hours/">New York</a></th><td>50</td><td>15 (sunset&ndash;sunrise)</td><td><strong>Form MV-262</strong> &mdash; <a href="https://dmv.ny.gov/driver-license/supervised-driving-requirements" rel="nofollow noopener" target="_blank">dmv.ny.gov</a></td><td>Verified Aug 2026</td></tr>
+                    <tr><th scope="row">North Carolina</th><td>60</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">North Dakota</th><td>50</td><td>Not published</td><td>Verify at the Department of Transportation website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Ohio</th><td>50</td><td>10</td><td>Use <a href="https://roadready.ohio.gov" rel="nofollow noopener" target="_blank">RoadReady Ohio</a>, the state-built app</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Oklahoma</th><td>50</td><td>10</td><td>Verify at the Service Oklahoma website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Oregon</th><td>100 (50 with approved course)</td><td>Not published</td><td>Verify at the Driver and Motor Vehicle Services website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Pennsylvania</th><td>65</td><td>10 (+5 bad weather)</td><td>Verify at the Pennsylvania Department of Transportation website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Rhode Island</th><td>50</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">South Carolina</th><td>40</td><td>10</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">South Dakota</th><td>50</td><td>10 (+10 inclement)</td><td>Verify at the Department of Public Safety website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Tennessee</th><td>50</td><td>10</td><td>Verify at the Department of Safety and Homeland Security website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row"><a href="/permitready/states/texas/driving-hours/">Texas</a></th><td>30 (10 with driver ed)</td><td>10</td><td><a href="https://www.dps.texas.gov/section/driver-license/teens" rel="nofollow noopener" target="_blank">DPS driving log (dps.texas.gov)</a></td><td>Verified Aug 2026</td></tr>
+                    <tr><th scope="row">Utah</th><td>40</td><td>10 after sunset</td><td>Verify at the Driver License Division website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Vermont</th><td>40</td><td>10</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Virginia</th><td>45</td><td>15</td><td>Verify at the Department of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Washington</th><td>50</td><td>10</td><td>Verify at the Department of Licensing website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">West Virginia</th><td>50</td><td>10</td><td>Verify at the Division of Motor Vehicles website</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Wisconsin</th><td>50</td><td>10 (darkness)</td><td>WisDOT <a href="https://wisconsindot.gov/Pages/dmv/teen-driver/prnt-spnsr/psdp.aspx" rel="nofollow noopener" target="_blank">parent-supervised driving program</a> (recommends RoadReady)</td><td>Approx. &mdash; verify</td></tr>
+                    <tr><th scope="row">Wyoming</th><td>50</td><td>10</td><td>Verify at the Department of Transportation website</td><td>Approx. &mdash; verify</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Which states publish an official form</h2>
+        <p>States fall into three groups, and knowing which one you are in saves an argument at the counter:</p>
+        <ul>
+            <li><strong>States with a mandatory or officially published form.</strong> Massachusetts (RMV Supervised Driving Log PDF) and New York (form MV-262) both publish documents you are expected to turn up with. Texas and Florida provide log forms through their agency sites and driver education providers. Use the state's document.</li>
+            <li><strong>States that reference a specific app.</strong> Massachusetts and Wisconsin reference RoadReady in official materials; Ohio operates its own state-built app, <a href="https://roadready.ohio.gov" rel="nofollow noopener" target="_blank">RoadReady Ohio</a>; Montana's state log PDF names RoadReady as an option. In those states, following the state's instruction is the shortest path.</li>
+            <li><strong>States with no required format.</strong> California is the clearest example: no mandatory form, the parent certifies the hours on the license application, and the DMV simply recommends keeping a log. Any accurate record works.</li>
+        </ul>
+
+        <h2>What a driving log needs to contain</h2>
+        <ul>
+            <li><strong>Date of each drive.</strong> Not just a weekly total &mdash; individual dated entries are what a reviewer expects.</li>
+            <li><strong>Duration</strong>, or start and end times you can subtract.</li>
+            <li><strong>Day or night</strong>, tracked separately, because almost every state sets a night minimum and it is the one families run short of.</li>
+            <li><strong>Conditions</strong> &mdash; highway, city, rain, heavy traffic. A few states require specific condition hours (Pennsylvania wants 5 in bad weather, South Dakota wants 10 in inclement weather).</li>
+            <li><strong>Supervisor identification</strong>, and usually a signature.</li>
+            <li><strong>A running total</strong> and a parent or guardian certification at the end.</li>
+        </ul>
+
+        <h2>Paper, app, or both</h2>
+        <p>Paper never runs out of battery, never loses an account, and is already in the format most agencies want. Its failure mode is that it lives in a glovebox and gets lost, and that nobody adds it up until the week before the road test.</p>
+        <p><a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311">PermitReady</a> is a free iPhone and iPad app with a supervised driving hours log: date, duration, and condition tags per drive, a running total against your state's requirement, and no account, no sign-in, and no internet needed. Entries can be backdated, so a paper log can be typed in later, and the log can be shared with a parent as a file over AirDrop, Messages, or Mail.</p>
+        <p>The honest recommendation is both. Track in the app because the running total keeps you honest about night hours, then print or transcribe onto your state's form for the signature. PermitReady does not generate a signed state affidavit, and no state has approved or rejected it as a substitute for an official form.</p>
+        <div class="hero-cta no-print" style="margin: 1.5rem 0;">
+            <a href="https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311" class="btn btn-primary btn-large">Download PermitReady Free</a>
+        </div>
+
+        <h2>Frequently asked questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">Does my state have an official printable driving log?</h3>
+                <p class="faq-answer">Some do. Massachusetts publishes a log PDF, New York uses MV-262, and Texas and Florida provide forms through their agency sites. California requires no specific form. For the rest, check the licensing agency's website using the table above.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can I use a generic log instead of the state form?</h3>
+                <p class="faq-answer">Only where the state does not mandate a form. Where one exists, use it &mdash; a generic log is still valuable as the running record you fill the official form in from.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What has to be on the log?</h3>
+                <p class="faq-answer">Date, duration, day or night, conditions, supervisor, signature, and a running total. Anything less and you are asking a clerk to take your word for it.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do I still need paper if I use an app?</h3>
+                <p class="faq-answer">Not always, but printing a copy at the end costs nothing and removes a failure point. Several states require a signed paper certification regardless of how the hours were tracked.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How many hours will I need?</h3>
+                <p class="faq-answer">Most states require 40 to 65 hours, with about half at 50. See the <a href="/permitready/guides/supervised-driving-hours-by-state/">full state-by-state guide</a> or run your own numbers in the <a href="/permitready/driving-log/calculator/">hours calculator</a>.</p>
+            </div>
+        </div>
+
+        <div class="legal-section no-print" style="margin-top: 3rem;">
+            <h3>Verification and disclaimers</h3>
+            <p class="verified-note">Massachusetts, Texas, Florida, New York, and California requirements verified August 2026 against their agency websites. All other figures are drawn from PermitReady's state pages and are approximate &mdash; verify with your state licensing agency before your road test.</p>
+            <p>PermitReady's driving hours log is a personal tracking tool. It is not a state form and has not been approved or endorsed by any state licensing agency. Check with your state's DMV, RMV, DPS, BMV, or equivalent agency for which log format they require, and use their official state form if one is mandated.</p>
+            <p>RoadReady&reg; is a registered trademark of Safe Roads Alliance, Inc. PermitReady is not affiliated with, endorsed by, or sponsored by Safe Roads Alliance, Inc.</p>
+            <p>PermitReady is not affiliated with, endorsed by, or approved by any DMV, RMV, BMV, DPS, or state agency.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PermitReady</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Permit test practice and a supervised driving hours log, in one free iPhone app. No account, no sign-in, works offline.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/permitready/">Home</a></li>
+                        <li><a href="/permitready/about/">About</a></li>
+                        <li><a href="/permitready/driving-log/">Driving Hours Log</a></li>
+                        <li><a href="/permitready/driving-log/calculator/">Hours Calculator</a></li>
+                        <li><a href="/permitready/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/permitready/terms.html">Terms of Service</a></li>
+                        <li><a href="/">TechSmog Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:permitready@techsmog.com">permitready@techsmog.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025&ndash;2026 TechSmog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
