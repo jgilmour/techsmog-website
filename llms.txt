@@ -90,6 +90,17 @@ Privacy: the driving log and study data are stored only on the device and never 
 - [What Counts as a Supervised Driving Hour?](https://techsmog.com/permitready/guides/what-counts-supervised-hours/)
 - [Free Printable Driving Log Templates — All 50 States](https://techsmog.com/permitready/driving-log/printable/)
 - [6 RoadReady Alternatives for Logging Supervised Driving Hours (2026)](https://techsmog.com/permitready/compare/roadready-alternatives/)
+- [A Parent's Guide to Supervising Your Teen Driver](https://techsmog.com/permitready/driving-log/for-parents/)
+- [PermitReady FAQ — Common Questions Answered](https://techsmog.com/permitready/help/faq/)
+- [Contact PermitReady — Get Help](https://techsmog.com/permitready/help/contact/)
+- [How to Log Supervised Driving Hours (Paper or App)](https://techsmog.com/permitready/guides/how-to-log-driving-hours/)
+- [Night Driving Hours Required by State (2026)](https://techsmog.com/permitready/guides/night-driving-requirements-by-state/)
+- [Supervised Driving Hours for Homeschool Students](https://techsmog.com/permitready/guides/driving-hours-for-homeschool-students/)
+- [What to Practice During Supervised Driving Hours](https://techsmog.com/permitready/guides/what-to-practice-during-supervised-hours/)
+- [Permit Test Study Guide — What's On It and How to Pass](https://techsmog.com/permitready/guides/permit-test-study-guide/)
+- [How Long Does It Take to Get a Driver's License? By State](https://techsmog.com/permitready/guides/how-long-does-it-take-to-get-a-license/)
+- [Can a Friend Supervise Driving Hours? Rules by State](https://techsmog.com/permitready/guides/can-a-friend-supervise-driving-hours/)
+- [Driving Log Template — What a Good Entry Looks Like](https://techsmog.com/permitready/guides/driving-log-template/)
 - [Massachusetts Supervised Driving Hours — 40-Hour Requirement & Log](https://techsmog.com/permitready/states/massachusetts/driving-hours/)
 - [Texas Supervised Driving Hours — 30-Hour Requirement & Log](https://techsmog.com/permitready/states/texas/driving-hours/)
 - [Florida Supervised Driving Hours — 50-Hour Requirement & Log](https://techsmog.com/permitready/states/florida/driving-hours/)
@@ -217,6 +228,9 @@ Honest, conversational Q&A pages written for people searching "[state] permit te
 
 ## Contact
 
-- Email: permitready@techsmog.com
+- Support email: support@permitready.app
+- Also reaches us: permitready@techsmog.com
+- Typical response time: within 2 business days
 - Website: https://techsmog.com
+- Help pages: https://techsmog.com/permitready/help/faq/ and https://techsmog.com/permitready/help/contact/
 
