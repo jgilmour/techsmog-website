@@ -209,7 +209,7 @@
     </script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -220,6 +220,9 @@
                     <img src="images/appstore.png" alt="PermitReady icon" class="logo-icon">
                     PermitReady
                 </a>
+                <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
                     <li><a href="/permitready/driving-log/">Driving Log</a></li>
@@ -648,6 +651,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Mobile nav toggle -->
+    <script>
+    (function() {
+        var btn = document.querySelector('.nav-toggle');
+        var menu = document.querySelector('.nav-links');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function() {
+            var open = menu.classList.toggle('nav-open');
+            btn.classList.toggle('nav-toggle--open', open);
+            btn.setAttribute('aria-expanded', String(open));
+            btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        // Close menu when a link is tapped
+        menu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                menu.classList.remove('nav-open');
+                btn.classList.remove('nav-toggle--open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+            }
+        });
+    })();
+    </script>
 
     <!-- Footer -->
     <footer class="site-footer">

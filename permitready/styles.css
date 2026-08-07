@@ -38,6 +38,11 @@ body {
     background-color: var(--background-color);
     line-height: 1.7;
     font-size: 17px;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -149,18 +154,53 @@ a:hover {
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 0.75rem;
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+    min-width: 40px;
+    min-height: 40px;
+    flex-shrink: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+}
+
+.nav-toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 680px) {
+    .site-header {
+        padding: 0.5rem 0;
     }
 
-    .nav-links a {
-        font-size: 0.8125rem;
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        position: relative;
     }
 
     .logo {
         font-size: 1.125rem;
         gap: 0.5rem;
+        flex: 1 0 auto;
     }
 
     .logo-icon {
@@ -168,26 +208,48 @@ a:hover {
         height: 32px !important;
     }
 
-    .container {
-        padding: 0 1rem;
+    /* Show hamburger on mobile */
+    .nav-toggle {
+        display: flex;
     }
 
-    .site-header {
-        padding: 0.5rem 0;
-    }
-}
-
-@media (max-width: 480px) {
+    /* Nav links become a dropdown */
     .nav-links {
-        gap: 0.5rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        border-top: 1px solid var(--border-color);
+        padding: 0.5rem 0;
+        gap: 0;
+        order: 10;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
     }
 
     .nav-links a {
-        font-size: 0.75rem;
+        display: block;
+        padding: 0.875rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 500;
+        white-space: normal;
+        color: var(--text-color);
     }
 
-    .logo {
-        font-size: 1rem;
+    .nav-links a:hover {
+        background: var(--background-alt);
+        opacity: 1;
     }
 }
 
@@ -718,6 +780,46 @@ section {
 }
 
 /* Responsive Design */
+/* Better mobile defaults — shrink hero text on small screens */
+@media (max-width: 480px) {
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.625rem; }
+
+    .hero {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.875rem;
+        line-height: 1.25;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-visual img {
+        max-width: 200px;
+    }
+
+    /* Don't scale featured pricing card on small screens — breaks layout */
+    .pricing-card.featured {
+        transform: none;
+        margin-top: 1rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 3.5rem;
