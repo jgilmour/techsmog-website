@@ -17,6 +17,15 @@ BASE_URL = "https://techsmog.com"
 APP_STORE_URL = "https://apps.apple.com/us/app/permitready-dmv-practice/id6763930311"
 UPDATE_DATE = date.today().isoformat()
 
+# States that have a hand-written /permitready/states/<slug>/driving-hours/ page.
+DRIVING_HOURS_PAGE_SLUGS = {
+    "massachusetts",
+    "texas",
+    "florida",
+    "new-york",
+    "california",
+}
+
 
 def load_states() -> list[dict]:
     return json.loads(STATE_DATA_PATH.read_text())
@@ -96,17 +105,28 @@ def render_hours_note(state: dict) -> str:
     Only states whose own requirement text names a supervised behind-the-wheel
     practice requirement get the definite phrasing. Everyone else gets the generic
     "most states" wording — never a figure we cannot source from states.json.
+
+    States with a hand-written /driving-hours/ sub-page also get a direct link to it.
     """
     if state.get("hasSupervisedHoursRequirement"):
-        return (
+        note = (
             "            <p>PermitReady's driving hours log tracks these hours for you, so you're not "
             "reconstructing them from memory at the counter.</p>"
         )
-    return (
-        "            <p>Most states require somewhere between 40 and 60 hours of supervised practice before the "
-        f"road test. PermitReady's driving hours log tracks that time for you — confirm {escape(seo_name(state))}'s "
-        f"current requirement with the {escape(state['agencyLong'])}.</p>"
-    )
+    else:
+        note = (
+            "            <p>Most states require somewhere between 40 and 60 hours of supervised practice before the "
+            f"road test. PermitReady's driving hours log tracks that time for you — confirm {escape(seo_name(state))}'s "
+            f"current requirement with the {escape(state['agencyLong'])}.</p>"
+        )
+
+    if state["slug"] in DRIVING_HOURS_PAGE_SLUGS:
+        note += (
+            f"\n            <p><a href=\"/permitready/states/{state['slug']}/driving-hours/\"><strong>"
+            f"{escape(seo_name(state))} supervised driving hours: requirements, night hours, and the official log &rarr;"
+            "</strong></a></p>"
+        )
+    return note
 
 
 def render_state_page(state: dict) -> str:
