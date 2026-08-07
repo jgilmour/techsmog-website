@@ -671,7 +671,9 @@ section {
 .privacy-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* Do NOT set left/right padding here — .container handles that */
 }
 
 .privacy-content h2 {
